@@ -2,6 +2,7 @@ import AboutSection from "../sections/AboutSection"
 import IntroSection from "../sections/IntroSection"
 import PriceSection from "../sections/PriceSection"
 import ServicesSection from "../sections/ServicesSection"
+import TestimonialSection from "../sections/TestimonialSection"
 
 export default function Home() {
 	return (
@@ -10,6 +11,7 @@ export default function Home() {
 			<AboutSection />
 			<ServicesSection />
 			<PriceSection />
+			<TestimonialSection />
 		</div>
 	)
 }

@@ -91,7 +91,10 @@ const ContactSection = () => {
 		}
 	}
 	return (
-		<SectionWrapper className="relative px-4 py-8 text-white bg-right bg-background-bar">
+		<SectionWrapper
+			className="relative px-4 py-8 text-white bg-right bg-background-bar"
+			id="contact-us"
+		>
 			<SectionTitle
 				negative
 				subtitle="Contact us"

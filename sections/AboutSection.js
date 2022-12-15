@@ -11,7 +11,7 @@ const AboutSection = () => {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	]
 	return (
-		<SectionWrapper className="py-20 bg-white ">
+		<SectionWrapper className="py-20 bg-white" id="about-us">
 			<div className="relative px-4 py-8 text-white bg-background-sand">
 				<SectionTitle
 					hasUnderline
@@ -45,10 +45,24 @@ const AboutSection = () => {
 				</p>
 
 				<div className="relative z-10 flex items-center gap-8 ">
-					<button className="px-6 py-3 text-black uppercase border border-transparent rounded-md bg-gold">
+					<button
+						className="px-6 py-3 text-black uppercase border border-transparent rounded-md bg-gold"
+						onClick={() =>
+							document
+								.getElementById("contact-us")
+								.scrollIntoView({ behavior: "smooth" })
+						}
+					>
 						Contact us
 					</button>
-					<button className="px-6 py-3 uppercase border-2 rounded-md border-gold text-gold bg-none">
+					<button
+						className="px-6 py-3 uppercase border-2 rounded-md border-gold text-gold bg-none"
+						onClick={() =>
+							document
+								.getElementById("pricesheet")
+								.scrollIntoView({ behavior: "smooth" })
+						}
+					>
 						View prices
 					</button>
 				</div>

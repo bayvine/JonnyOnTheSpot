@@ -59,7 +59,7 @@ const TestimonialSection = () => {
 		},
 	]
 	return (
-		<SectionWrapper className="px-4 py-8 mt-20">
+		<SectionWrapper className="px-4 py-8 mt-20" id="testimonials">
 			<SectionTitle subtitle="Satisfied clients" title="Testimonials" />
 			<div className="grid grid-cols-1 gap-8 my-12 ">
 				{testimonials.map((item, index) => {

@@ -69,7 +69,7 @@ const ServicesSection = () => {
 		},
 	]
 	return (
-		<SectionWrapper className="px-4 py-20 bg-white">
+		<SectionWrapper className="px-4 py-20 bg-white" id="services">
 			<SectionTitle
 				title="BARTENDING SERVICES TAILORED TO YOUR NEEDS"
 				subtitle="our services"
@@ -80,7 +80,14 @@ const ServicesSection = () => {
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 				</p>
-				<button className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold">
+				<button
+					onClick={() =>
+						document
+							.getElementById("pricesheet")
+							.scrollIntoView({ behavior: "smooth" })
+					}
+					className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold"
+				>
 					View prices
 				</button>
 			</div>

@@ -82,7 +82,10 @@ const PriceSection = () => {
 		},
 	]
 	return (
-		<SectionWrapper className="relative px-4 py-8 mt-20 bg-right bg-background-bar">
+		<SectionWrapper
+			className="relative px-4 py-8 mt-20 bg-right bg-background-bar"
+			id="pricesheet"
+		>
 			<SectionTitle
 				subtitle="Price sheet"
 				title="Tailored Price list"

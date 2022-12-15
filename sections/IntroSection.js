@@ -34,17 +34,51 @@ const IntroSection = () => {
 					})}
 				</div>
 				<div className="flex items-center gap-8 pt-12">
-					<button className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent">
+					<button
+						className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent"
+						onClick={() =>
+							document
+								.getElementById("contact-us")
+								.scrollIntoView({ behavior: "smooth" })
+						}
+					>
 						Contact us
 					</button>
-					<button className="uppercase rounded-md border-2 border-[#F8DDA4] text-[#F8DDA4] px-6 py-3 bg-none">
+					<button
+						className="uppercase rounded-md border-2 border-[#F8DDA4] text-[#F8DDA4] px-6 py-3 bg-none"
+						onClick={() =>
+							document
+								.getElementById("pricesheet")
+								.scrollIntoView({ behavior: "smooth" })
+						}
+					>
 						View prices
 					</button>
 				</div>
 				<div className="flex justify-center gap-2 mt-auto justify-self-end">
-					<FaInstagram size={30} color="#F8DDA4" />
-					<FaFacebook size={30} color="#F8DDA4" />
-					<FaYelp size={30} color="#F8DDA4" />
+					<a
+						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<FaInstagram size={30} color="#F8DDA4" />
+					</a>
+
+					<a
+						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<FaFacebook size={30} color="#F8DDA4" />
+					</a>
+
+					<a
+						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<FaYelp size={30} color="#F8DDA4" />
+					</a>
 				</div>
 			</div>
 			<div className="overflow-x-hidden overflow-y-hidden">

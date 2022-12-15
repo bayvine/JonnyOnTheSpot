@@ -1,5 +1,6 @@
 import Link from "next/link"
 import React from "react"
+import { FaFacebook, FaInstagram, FaYelp } from "react-icons/fa"
 import SectionWrapper from "../components/SectionWrapper"
 
 const Footer = () => {
@@ -9,9 +10,9 @@ const Footer = () => {
 				<div>
 					<hr className="hidden" />
 					<div className="flex flex-col items-center">
-						<h4 className="text-3xl font-bold uppercase text-gold">
+						<h5 className="text-3xl font-bold uppercase text-gold">
 							JONNYONTHESPOT ©
-						</h4>
+						</h5>
 						<span className="text-gold">
 							Mobile Bar Company serving Bay Area, CA
 						</span>
@@ -39,6 +40,21 @@ const Footer = () => {
 								</a>
 							</li>
 						</ul>
+						<div className="flex gap-2 mt-8">
+							<a
+								href="https://www.instagram.com/jonnyonthespot_mobilebar/"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								<FaInstagram size={30} color="white" />
+							</a>
+							<a href="" target="_blank" rel="noreferrer noopener">
+								<FaFacebook size={30} color="white" />
+							</a>
+							<a href="" target="_blank" rel="noreferrer noopener">
+								<FaYelp size={30} color="white" />
+							</a>
+						</div>
 					</div>
 					<div>
 						<h5 className="py-2 text-xl">Quicklinks</h5>

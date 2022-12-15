@@ -7,6 +7,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				gold: "#F8DDA4",
+			},
 			backgroundImage: {
 				"background-sand": "url('/images/backgroundSand.jpg')",
 			},

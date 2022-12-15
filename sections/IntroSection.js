@@ -13,13 +13,13 @@ const IntroSection = () => {
 		}
 	}, [])
 	return (
-		<SectionWrapper className="min-h-screen relative top-0 left-0 bg-black flex items-center justify-center border ">
-			<div className="flex relative z-20 justify-center min-h-screen flex-col gap-2 items-center p-4">
-				<h1 className="text-4xl font-black uppercase text-white mt-auto overflow-hidden">
+		<SectionWrapper className="relative top-0 left-0 flex items-center justify-center min-h-screen bg-black ">
+			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4">
+				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit">
 					JonnyOnTheSpot
 				</h1>
 				<GoldenHorizontalLine />
-				<p className="text-center uppercase font-bold text-white">
+				<p className="font-bold text-center text-white uppercase">
 					on the spot bartending for weddings and private events serving the bay
 					area, ca
 				</p>
@@ -33,7 +33,7 @@ const IntroSection = () => {
 						)
 					})}
 				</div>
-				<div className="pt-12 flex items-center gap-8">
+				<div className="flex items-center gap-8 pt-12">
 					<button className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent">
 						Contact us
 					</button>
@@ -41,7 +41,7 @@ const IntroSection = () => {
 						View prices
 					</button>
 				</div>
-				<div className="flex justify-center gap-2  mt-auto  justify-self-end">
+				<div className="flex justify-center gap-2 mt-auto justify-self-end">
 					<FaInstagram size={30} color="#F8DDA4" />
 					<FaFacebook size={30} color="#F8DDA4" />
 					<FaYelp size={30} color="#F8DDA4" />
@@ -55,7 +55,7 @@ const IntroSection = () => {
 					muted
 					loop
 					id="myVideo"
-					className="absolute right-0 bottom-0 min-w-full min-h-full object-cover overflow-hidden"
+					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden"
 				>
 					<source src="videos/shaking-cocktail.mp4" type="video/mp4" />
 				</video>

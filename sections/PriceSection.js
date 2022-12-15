@@ -7,10 +7,10 @@ const PriceItem = ({ imgSrc, imgAlt, title, description, price }) => {
 		<div className="flex flex-col gap-4">
 			<img src={imgSrc} alt={imgAlt} className="w-20 h-20 bg-white " />
 			<div>
-				<h4 className="text-3xl uppercase text-gold">{title}</h4>
-				<span className="text-xl text-bold">{description}</span>
+				<h4 className="text-2xl uppercase text-gold font-title ">{title}</h4>
+				<span className="text-lg text-bold">{description}</span>
 			</div>
-			<div className="text-4xl uppercase text-gold">{price}</div>
+			<div className="text-3xl uppercase text-gold font-title ">{price}</div>
 		</div>
 	)
 }

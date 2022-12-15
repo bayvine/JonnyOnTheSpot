@@ -10,16 +10,17 @@ const IntroSection = () => {
 	useEffect(() => {
 		if (videoRef.current) {
 			videoRef.current.playbackRate = 0.5
+			videoRef.current.play()
 		}
 	}, [])
 	return (
 		<SectionWrapper className="relative top-0 left-0 flex items-center justify-center min-h-screen bg-black ">
 			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4">
-				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit">
+				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title">
 					JonnyOnTheSpot
 				</h1>
 				<GoldenHorizontalLine />
-				<p className="font-bold text-center text-white uppercase">
+				<p className="text-center text-white uppercase font-title">
 					on the spot bartending for weddings and private events serving the bay
 					area, ca
 				</p>
@@ -35,7 +36,7 @@ const IntroSection = () => {
 				</div>
 				<div className="flex items-center gap-8 pt-12">
 					<button
-						className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent"
+						className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent font-title "
 						onClick={() =>
 							document
 								.getElementById("contact-us")
@@ -45,7 +46,7 @@ const IntroSection = () => {
 						Contact us
 					</button>
 					<button
-						className="uppercase rounded-md border-2 border-[#F8DDA4] text-[#F8DDA4] px-6 py-3 bg-none"
+						className="uppercase rounded-md border-2 border-[#F8DDA4] text-[#F8DDA4] px-6 py-3 bg-none font-title"
 						onClick={() =>
 							document
 								.getElementById("pricesheet")

@@ -13,7 +13,7 @@ const TestimonialCard = ({ imgSrc, imgAlt, subtitle, quote, clientDescr }) => {
 				className="object-cover aspect-square"
 			/>
 			<div className="flex flex-col gap-4">
-				<span className="text-2xl font-bold uppercase text-roux">
+				<span className="text-2xl font-bold uppercase text-roux font-title ">
 					{subtitle}
 				</span>
 				<p>{quote}</p>

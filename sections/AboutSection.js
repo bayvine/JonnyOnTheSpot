@@ -46,7 +46,7 @@ const AboutSection = () => {
 
 				<div className="relative z-10 flex items-center gap-8 ">
 					<button
-						className="px-6 py-3 text-black uppercase border border-transparent rounded-md bg-gold"
+						className="px-6 py-3 text-black uppercase border border-transparent rounded-md font-title bg-gold"
 						onClick={() =>
 							document
 								.getElementById("contact-us")
@@ -56,7 +56,7 @@ const AboutSection = () => {
 						Contact us
 					</button>
 					<button
-						className="px-6 py-3 uppercase border-2 rounded-md border-gold text-gold bg-none"
+						className="px-6 py-3 uppercase border-2 rounded-md border-gold font-title text-gold bg-none"
 						onClick={() =>
 							document
 								.getElementById("pricesheet")

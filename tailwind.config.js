@@ -5,6 +5,10 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 		"./sections/**/*.{js,ts,jsx,tsx}",
 	],
+	fontFamily: {
+		sans: ["Bodoni Moda", "sans-serif"],
+		body: ["Raleway", "sans-serif"],
+	},
 	theme: {
 		extend: {
 			colors: {

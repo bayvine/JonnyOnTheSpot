@@ -6,10 +6,7 @@ import SectionWrapper from "../components/SectionWrapper"
 
 const Hamburger = ({ handleClick, closed }) => {
 	return (
-		<button
-			onClick={handleClick}
-			className="hover:bg-white hover:text-black active:bg-white active:text-black"
-		>
+		<button onClick={handleClick}>
 			{closed ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +14,7 @@ const Hamburger = ({ handleClick, closed }) => {
 					viewBox="0 0 24 24"
 					strokeWidth="1.5"
 					stroke="currentColor"
-					className="w-6 h-6"
+					className="w-6 h-6 text-gold"
 				>
 					<path
 						strokeLinecap="round"
@@ -32,7 +29,7 @@ const Hamburger = ({ handleClick, closed }) => {
 					viewBox="0 0 24 24"
 					strokeWidth="1.5"
 					stroke="currentColor"
-					className="w-6 h-6"
+					className="w-6 h-6 text-gold"
 				>
 					<path
 						strokeLinecap="round"
@@ -54,7 +51,9 @@ const Navigation = () => {
 					id="navigation"
 					className="flex items-center justify-between w-full px-4 py-4 "
 				>
-					<div className="text-xl">JonnyOnTheSpot</div>
+					<div className="text-xl uppercase font-title text-gold">
+						JonnyOnTheSpot
+					</div>
 					<div>
 						<Hamburger handleClick={() => setMobileMenu((prev) => !prev)} />
 					</div>
@@ -67,7 +66,9 @@ const Navigation = () => {
 				])}
 			>
 				<div className="flex items-center justify-between w-full px-4 py-4">
-					<div className="text-xl">JonnyOnTheSpot</div>
+					<div className="text-xl uppercase text-gold font-title">
+						JONNYONTHESPOT
+					</div>
 					<div>
 						<Hamburger
 							closed
@@ -105,7 +106,7 @@ const Navigation = () => {
 										.getElementById("contact-us")
 										.scrollIntoView({ behavior: "smooth" })
 								}}
-								className="uppercase rounded-md bg-[#F8DDA4] px-10 w-full text-black py-3 border border-transparent"
+								className="uppercase rounded-md bg-[#F8DDA4] px-10 w-full text-black py-3 border border-transparent font-title "
 							>
 								Contact us
 							</button>

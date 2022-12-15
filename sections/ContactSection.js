@@ -101,7 +101,7 @@ const ContactSection = () => {
 				title="Get a quote and boost your next event"
 				hasUnderline
 			/>
-			<div className="relative z-10 py-5 text-2xl font-medium uppercase break-after-avoid-page">
+			<div className="relative z-10 py-5 text-2xl font-medium uppercase break-after-avoid-page font-title ">
 				Call us at{" "}
 				<a href="tel:+19253216569" className="underline text-gold">
 					(926)-321-6569
@@ -220,7 +220,7 @@ const ContactSection = () => {
 					<div>
 						<button
 							type="submit"
-							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md bg-gold"
+							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md  font-title bg-gold"
 						>
 							Submit
 						</button>

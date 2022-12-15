@@ -10,7 +10,7 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 	return (
 		<div className="flex flex-col text-white bg-black rounded-lg h-80">
 			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2">
-				<h3 className="relative z-10 text-4xl text-center text-white uppercase">
+				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
 					{serviceTitle}
 				</h3>
 				<div>
@@ -75,7 +75,7 @@ const ServicesSection = () => {
 				subtitle="our services"
 			/>
 			<div className="py-8">
-				<p>
+				<p className="">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -86,7 +86,7 @@ const ServicesSection = () => {
 							.getElementById("pricesheet")
 							.scrollIntoView({ behavior: "smooth" })
 					}
-					className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold"
+					className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
 				>
 					View prices
 				</button>

@@ -10,7 +10,7 @@ const SectionTitle = ({
 	return (
 		<h2
 			className={clsx([
-				`relative z-10 flex flex-col text-5xl uppercase gap-2 break-words`,
+				`relative z-10 flex flex-col text-5xl uppercase gap-2 break-words font-title `,
 				align == "left" && "text-left",
 				align == "center" && "text-center",
 				align == "right" && "text-right",

@@ -10,10 +10,10 @@ const Footer = () => {
 				<div>
 					<hr className="hidden" />
 					<div className="flex flex-col items-center">
-						<h5 className="text-3xl font-bold uppercase text-gold">
+						<h5 className="text-3xl font-bold uppercase text-gold font-title ">
 							JONNYONTHESPOT ©
 						</h5>
-						<span className="text-gold">
+						<span className="text-gold font-title ">
 							Mobile Bar Company serving Bay Area, CA
 						</span>
 					</div>

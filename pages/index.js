@@ -1,4 +1,5 @@
 import AboutSection from "../sections/AboutSection"
+import ContactSection from "../sections/ContactSection"
 import GallerySection from "../sections/GallerySection"
 import IntroSection from "../sections/IntroSection"
 import PriceSection from "../sections/PriceSection"
@@ -14,6 +15,7 @@ export default function Home() {
 			<PriceSection />
 			<TestimonialSection />
 			<GallerySection />
+			<ContactSection />
 		</div>
 	)
 }

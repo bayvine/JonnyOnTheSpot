@@ -14,6 +14,7 @@ module.exports = {
 			backgroundImage: {
 				"background-sand": "url('/images/backgroundSand.jpg')",
 				"background-bar": "url('/images/barBackground.jpg')",
+				"background-tap": "url('/images/tapBackground.jpg')",
 			},
 		},
 	},

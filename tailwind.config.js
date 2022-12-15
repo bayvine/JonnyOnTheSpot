@@ -9,9 +9,11 @@ module.exports = {
 		extend: {
 			colors: {
 				gold: "#F8DDA4",
+				roux: "#813405",
 			},
 			backgroundImage: {
 				"background-sand": "url('/images/backgroundSand.jpg')",
+				"background-bar": "url('/images/barBackground.jpg')",
 			},
 		},
 	},

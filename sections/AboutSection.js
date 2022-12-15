@@ -1,42 +1,9 @@
 import clsx from "clsx"
 import React from "react"
 import Check from "../components/Check"
+import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 
-const SectionTitle = ({
-	subtitle,
-	title,
-	align = "left" || "center" || "right",
-	negative = false,
-	hasUnderline = false,
-	className,
-}) => {
-	return (
-		<h2
-			className={clsx([
-				`relative z-10 flex flex-col text-6xl uppercase gap-2`,
-				align == "left" && "text-left",
-				align == "center" && "text-center",
-				align == "right" && "text-right",
-				negative && "text-white",
-				className,
-			])}
-		>
-			<span className={clsx([`text-3xl`, negative && "text-gold"])}>
-				{subtitle}
-			</span>
-			{title}
-			{hasUnderline && (
-				<hr
-					className={clsx([
-						negative && "bg-gold",
-						"h-0.5 w-full bg-white mt-2",
-					])}
-				/>
-			)}
-		</h2>
-	)
-}
 const AboutSection = () => {
 	const checks = [
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -44,7 +11,7 @@ const AboutSection = () => {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	]
 	return (
-		<SectionWrapper className="gap-8 py-20 bg-white ">
+		<SectionWrapper className="py-20 bg-white ">
 			<div className="relative px-4 py-8 text-white bg-background-sand">
 				<SectionTitle
 					hasUnderline

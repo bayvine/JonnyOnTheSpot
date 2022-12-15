@@ -5,11 +5,11 @@ import ServicesSection from "../sections/ServicesSection"
 
 export default function Home() {
 	return (
-		<>
+		<div className="overflow-x-hidden">
 			<IntroSection />
 			<AboutSection />
 			<ServicesSection />
 			<PriceSection />
-		</>
+		</div>
 	)
 }

@@ -107,10 +107,7 @@ const ContactSection = () => {
 					(926)-321-6569
 				</a>{" "}
 				or email us at{" "}
-				<a
-					href="emailto:bronnylang@outlook.com"
-					className="underline text-gold"
-				>
+				<a href="mailto:bronnylang@outlook.com" className="underline text-gold">
 					Bronnylang@outlook.com
 				</a>
 			</div>

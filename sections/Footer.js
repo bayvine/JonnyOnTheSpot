@@ -33,7 +33,7 @@ const Footer = () => {
 							<li>
 								Email:{" "}
 								<a
-									href="emailto:bronnylang@outlook.com"
+									href="mailto:bronnylang@outlook.com"
 									className="underline w-fit"
 								>
 									bronnylang@outlook.com

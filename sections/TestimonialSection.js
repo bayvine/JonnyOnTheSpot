@@ -4,7 +4,7 @@ import SectionWrapper from "../components/SectionWrapper"
 
 const TestimonialCard = ({ imgSrc, imgAlt, subtitle, quote, clientDescr }) => {
 	return (
-		<div className="flex flex-col items-center gap-8">
+		<div className="flex flex-col items-center gap-8 sm:items-start">
 			<img
 				src={imgSrc}
 				alt={imgAlt}

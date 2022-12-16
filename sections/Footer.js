@@ -5,10 +5,10 @@ import SectionWrapper from "../components/SectionWrapper"
 
 const Footer = () => {
 	return (
-		<footer>
-			<SectionWrapper className="relative px-4 pt-12 pb-4 text-white bg-black">
-				<div>
-					<hr className="hidden" />
+		<footer className="bg-black">
+			<SectionWrapper className="relative px-4 pt-12 pb-4 text-white sm:max-w-md sm:mx-auto">
+				<div className="flex border sm:gap-4 sm:items-center">
+					<hr className="hidden w-full h-2 bg-gold sm:block" />
 					<div className="flex flex-col items-center">
 						<h5 className="text-3xl font-bold uppercase text-gold font-title ">
 							JONNYONTHESPOT ©
@@ -17,7 +17,7 @@ const Footer = () => {
 							Mobile Bar Company serving Bay Area, CA
 						</span>
 					</div>
-					<hr className="hidden" />
+					<hr className="hidden w-full h-2 bg-gold sm:block" />
 				</div>
 				<div className="flex flex-col gap-8 my-12">
 					<div>

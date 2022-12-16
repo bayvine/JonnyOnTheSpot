@@ -95,25 +95,31 @@ const ContactSection = () => {
 			className="relative px-4 py-8 text-white bg-right bg-background-bar"
 			id="contact-us"
 		>
-			<SectionTitle
-				negative
-				subtitle="Contact us"
-				title="Get a quote and boost your next event"
-				hasUnderline
-			/>
-			<div className="relative z-10 py-5 text-2xl font-medium uppercase break-after-avoid-page font-title ">
-				Call us at{" "}
-				<a href="tel:+19253216569" className="underline text-gold">
-					(926)-321-6569
-				</a>{" "}
-				or email us at{" "}
-				<a href="mailto:bronnylang@outlook.com" className="underline text-gold">
-					Bronnylang@outlook.com
-				</a>
+			<div className="sm:max-w-md sm:mx-auto">
+				<SectionTitle
+					negative
+					subtitle="Contact us"
+					title="Get a quote and boost your next event"
+					hasUnderline
+				/>
+				<div className="relative z-10 py-5 text-2xl font-medium uppercase break-after-avoid-page font-title ">
+					Call us at{" "}
+					<a href="tel:+19253216569" className="underline text-gold">
+						(926)-321-6569
+					</a>{" "}
+					or email us at{" "}
+					<a
+						href="mailto:bronnylang@outlook.com"
+						className="underline text-gold"
+					>
+						Bronnylang@outlook.com
+					</a>
+				</div>
+				<span className="relative z-10 text-white">
+					Or fill out the form below, and we'll get back to you immediately.
+				</span>
 			</div>
-			<span className="relative z-10 text-white">
-				Or fill out the form below, and we'll get back to you immediately.
-			</span>
+
 			{success ? (
 				<div className="relative z-10 my-8 text-xl font-bold text-center text-emerald-400">
 					We received your inquiry! We'll get back to you as soon as possible.
@@ -125,7 +131,7 @@ const ContactSection = () => {
 					method="POST"
 					data-netlify="true"
 					onSubmit={submit}
-					className="relative z-10 grid grid-cols-1 gap-4 my-6"
+					className="relative z-10 grid grid-cols-1 gap-4 my-6 sm:max-w-md sm:mx-auto"
 					data-netlify-honeypot="bot-field"
 				>
 					{formError && <span className="text-red-400">{formError}</span>}
@@ -217,7 +223,7 @@ const ContactSection = () => {
 					<div>
 						<button
 							type="submit"
-							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md  font-title bg-gold"
+							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"
 						>
 							Submit
 						</button>

@@ -6,7 +6,7 @@ import SectionWrapper from "../components/SectionWrapper"
 
 const Hamburger = ({ handleClick, closed }) => {
 	return (
-		<button onClick={handleClick}>
+		<button onClick={handleClick} className="">
 			{closed ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,42 @@ const Navigation = () => {
 					<div className="text-xl uppercase font-title text-gold">
 						JonnyOnTheSpot
 					</div>
-					<div>
+					<div className="">
+						<ul className="hidden">
+							<li>
+								<Link onClick={handleMenu} href="#about-us">
+									About us
+								</Link>
+							</li>
+							<li>
+								<Link onClick={handleMenu} href="#services">
+									Services
+								</Link>
+							</li>
+							<li>
+								<Link onClick={handleMenu} href="#pricesheet">
+									Price sheet
+								</Link>
+							</li>
+							<li>
+								<Link onClick={handleMenu} href="#testimonials">
+									Testimonials
+								</Link>
+							</li>
+							<li>
+								<button
+									onClick={() => {
+										handleMenu()
+										document
+											.getElementById("contact-us")
+											.scrollIntoView({ behavior: "smooth" })
+									}}
+									className="uppercase rounded-md bg-[#F8DDA4] px-10 w-full text-black py-3 border border-transparent font-title "
+								>
+									Contact us
+								</button>
+							</li>
+						</ul>
 						<Hamburger handleClick={() => setMobileMenu((prev) => !prev)} />
 					</div>
 				</SectionWrapper>
@@ -77,7 +112,7 @@ const Navigation = () => {
 					</div>
 				</div>
 				<div className="flex items-start justify-center w-full h-full mt-20">
-					<ul className="flex flex-col justify-center gap-8 text-4xl text-center">
+					<ul className="flex flex-col justify-center gap-8 text-4xl text-center sm:text-lg">
 						<li>
 							<Link onClick={handleMenu} href="#about-us">
 								About us

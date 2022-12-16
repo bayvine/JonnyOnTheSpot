@@ -92,7 +92,7 @@ const PriceSection = () => {
 				negative
 				hasUnderline
 			/>
-			<div className="relative z-10 flex flex-wrap gap-8 my-8 text-white">
+			<div className="relative z-10 flex flex-wrap gap-8 my-8 text-white sm:w-full">
 				{prices.map((price, index) => {
 					return (
 						<PriceItem

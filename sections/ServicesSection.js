@@ -8,7 +8,7 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 	useEffect(() => {}, [isMobile])
 
 	return (
-		<div className="flex flex-col text-white bg-black rounded-lg h-80">
+		<div className="flex flex-col text-white bg-black rounded-lg h-80 ">
 			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2">
 				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
 					{serviceTitle}
@@ -91,7 +91,7 @@ const ServicesSection = () => {
 					View prices
 				</button>
 			</div>
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 sm:grid sm:grid-cols-2">
 				{services.map((service, index) => {
 					return (
 						<ServiceCard

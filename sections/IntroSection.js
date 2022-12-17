@@ -14,7 +14,7 @@ const IntroSection = () => {
 		}
 	}, [])
 	return (
-		<SectionWrapper className="relative top-0 left-0 min-h-screen bg-black md:py-20">
+		<SectionWrapper className="relative top-0 left-0 min-h-screen sm:min-h-[750px] sm:flex sm:justify-center sm:items-center bg-black md:py-20">
 			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4 lg:gap-4 xl:max-w-4xl xl:mx-auto">
 				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title lg:text-6xl xl:text-8xl">
 					JonnyOnTheSpot

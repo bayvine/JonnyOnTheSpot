@@ -12,8 +12,11 @@ import TestimonialSection from "../sections/TestimonialSection"
 export default function Home() {
 	return (
 		<div className="overflow-x-hidden">
+			<Head>
+				<title>JonnyOnTheSpot | Mobile Bar serving Bay Area, CA</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<Navigation />
-
 			<IntroSection />
 			<AboutSection />
 			<ServicesSection />

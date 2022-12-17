@@ -14,7 +14,7 @@ const TestimonialCard = ({
 	return (
 		<div
 			className={clsx([
-				"flex flex-col items-center gap-8 sm:items-start md:grid md:grid-cols-2 xl:flex xl:flex-row",
+				"flex flex-col items-center gap-8 sm:items-start md:grid md:grid-cols-2 xl:flex xl:flex-row xl:gap-12",
 				className,
 			])}
 		>

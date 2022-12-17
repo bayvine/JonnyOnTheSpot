@@ -49,13 +49,13 @@ const Navigation = () => {
 			<nav className="fixed top-0 left-0 z-40 w-full text-white bg-black">
 				<section
 					id="navigation"
-					className="flex items-center justify-between w-full px-4 py-4 "
+					className="flex items-center justify-between w-full px-4 py-4 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl sm:mx-auto"
 				>
 					<div className="text-xl uppercase font-title text-gold w-fit">
 						JonnyOnTheSpot
 					</div>
 					<div className="">
-						<ul className="hidden md:flex md:items-center md:gap-4">
+						<ul className="hidden md:flex md:items-center md:gap-4 xl:gap-8">
 							<li>
 								<Link href="#about-us">About us</Link>
 							</li>

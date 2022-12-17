@@ -11,19 +11,19 @@ const AboutSection = () => {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 	]
 	return (
-		<SectionWrapper className="py-24 bg-white xl:pt-44" id="about-us">
+		<SectionWrapper className="py-24 bg-white 2xl:mt-12 xl:pt-44" id="about-us">
 			<div className="xl:flex">
-				<div className="hidden xl:block xl:shrink-0 xl:-mt-20 xl:-mr-16">
+				<div className="hidden xl:block xl:shrink-0 xl:-mt-20 xl:-mr-16 2xl:-mt-24">
 					<img
-						className=" xl:aspect-[896/1344] w-[400px] "
+						className=" xl:aspect-[896/1344] w-[400px] 2xl:w-[380px]"
 						src="images/pourIn.jpg"
 						alt="Bartender pouring Jack daniels in a glass"
 					/>
 				</div>
-				<div className="relative px-4 py-8 text-white md:px-12 bg-background-sand xl:py-10">
+				<div className="relative px-4 py-8 text-white md:px-12 bg-background-sand xl:py-10 2xl:p-20">
 					<SectionTitle
 						hasUnderline
-						title="About us"
+						title="PREMIUM MOBILE BARTENDING"
 						subtitle="about us"
 						align="left"
 						negative
@@ -52,7 +52,7 @@ const AboutSection = () => {
 						ad minim veniam!
 					</p>
 
-					<div className="relative z-10 flex items-center gap-8 ">
+					<div className="relative z-10 flex items-center gap-8 2xl:mt-8">
 						<button
 							className="px-6 py-3 text-black uppercase border border-transparent rounded-md font-title bg-gold"
 							onClick={() =>

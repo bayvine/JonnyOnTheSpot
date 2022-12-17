@@ -9,7 +9,7 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 
 	return (
 		<div className="flex flex-col text-white bg-black rounded-lg h-80 xl:max-h-max xl:h-full">
-			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2 xl:h-48">
+			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2 xl:h-48 2xl:h-36">
 				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
 					{serviceTitle}
 				</h3>
@@ -70,14 +70,14 @@ const ServicesSection = () => {
 	]
 	return (
 		<SectionWrapper className="px-4 py-20 bg-white xl:py-8" id="services">
-			<div className="xl:flex xl:flex-row xl:justify-between xl:items-baseline ">
+			<div className="xl:flex xl:flex-row xl:justify-between xl:items-baseline">
 				<SectionTitle
 					title="BARTENDING SERVICES TAILORED TO YOUR NEEDS"
 					subtitle="our services"
-					className="xl:max-w-xl"
+					className="xl:max-w-xl 2xl:max-w-2xl"
 				/>
 				<div className="py-8">
-					<p className="lg:text-lg xl:max-w-lg">
+					<p className="lg:text-lg xl:max-w-lg 2xl:max-w-xl">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

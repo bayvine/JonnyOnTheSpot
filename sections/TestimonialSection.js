@@ -84,8 +84,8 @@ const TestimonialSection = () => {
 							subtitle={item.oneliner}
 							quote={item.testimonial}
 							clientDescr={item.client}
-							className={`${index == 1 && "self-end"} ${
-								index == testimonials.length - 1 && "ml-14"
+							className={`${index == 1 && "xl:self-end"} ${
+								index == testimonials.length - 1 && "xl:ml-14"
 							}`}
 						/>
 					)

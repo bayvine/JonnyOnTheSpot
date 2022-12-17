@@ -6,20 +6,20 @@ import SectionWrapper from "../components/SectionWrapper"
 const Footer = () => {
 	return (
 		<footer className="bg-black">
-			<SectionWrapper className="relative px-4 pt-12 pb-4 text-white sm:max-w-md sm:mx-auto">
-				<div className="flex border sm:gap-4 sm:items-center">
-					<hr className="hidden w-full h-2 bg-gold sm:block" />
-					<div className="flex flex-col items-center">
-						<h5 className="text-3xl font-bold uppercase text-gold font-title ">
+			<SectionWrapper className="relative px-4 pt-12 pb-4 text-white xl:px-0">
+				<div className="flex sm:gap-4 sm:items-center md:justify-center">
+					<hr className="hidden w-1/3 h-0.5 bg-gold sm:block" />
+					<div className="flex flex-col items-center md:text-center">
+						<h5 className="text-3xl font-bold uppercase md:text-2xl text-gold font-title ">
 							JONNYONTHESPOT ©
 						</h5>
 						<span className="text-gold font-title ">
 							Mobile Bar Company serving Bay Area, CA
 						</span>
 					</div>
-					<hr className="hidden w-full h-2 bg-gold sm:block" />
+					<hr className="hidden w-1/3 h-0.5 bg-gold sm:block" />
 				</div>
-				<div className="flex flex-col gap-8 my-12">
+				<div className="flex flex-col gap-8 my-12 md:flex-row md:justify-between">
 					<div>
 						<h5 className="py-2 text-xl">JonnyOnTheSpot ©</h5>
 						<ul>
@@ -40,7 +40,7 @@ const Footer = () => {
 								</a>
 							</li>
 						</ul>
-						<div className="flex gap-2 mt-8">
+						<div className="flex gap-2 mt-8 md:gap-4">
 							<a
 								href="https://www.instagram.com/jonnyonthespot_mobilebar/"
 								target="_blank"

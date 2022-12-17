@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
+import useIsMobile from "../utils/useIsMobile"
 
 const ContactSection = () => {
+	const isMobile = useIsMobile()
 	const [email, setEmail] = useState("")
 	const [emailError, setEmailError] = useState(false)
 
@@ -92,17 +94,18 @@ const ContactSection = () => {
 	}
 	return (
 		<SectionWrapper
-			className="relative px-4 py-8 text-white bg-right bg-background-bar"
+			className="relative px-4 py-8 text-white bg-center bg-background-bar xl:py-12"
 			id="contact-us"
 		>
-			<div className="sm:max-w-md sm:mx-auto">
+			<div className="xl:max-w-2xl sm:max-w-md sm:mx-auto xl:text-center">
 				<SectionTitle
 					negative
 					subtitle="Contact us"
 					title="Get a quote and boost your next event"
 					hasUnderline
+					align={isMobile ? "left" : "center"}
 				/>
-				<div className="relative z-10 py-5 text-2xl font-medium uppercase break-after-avoid-page font-title ">
+				<div className="relative z-10 py-5 text-2xl font-medium uppercase font-title xl:text-center ">
 					Call us at{" "}
 					<a href="tel:+19253216569" className="underline text-gold">
 						(926)-321-6569
@@ -131,7 +134,7 @@ const ContactSection = () => {
 					method="POST"
 					data-netlify="true"
 					onSubmit={submit}
-					className="relative z-10 grid grid-cols-1 gap-4 my-6 sm:max-w-md sm:mx-auto"
+					className="relative z-10 grid grid-cols-1 gap-4 my-6 sm:max-w-md sm:mx-auto xl:grid-cols-2 xl:max-w-xl"
 					data-netlify-honeypot="bot-field"
 				>
 					{formError && <span className="text-red-400">{formError}</span>}
@@ -206,7 +209,7 @@ const ContactSection = () => {
 							</span>
 						)}
 					</div>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 xl:col-span-2">
 						<label htmlFor="description">
 							Tell us about your event (optional)
 						</label>
@@ -220,7 +223,7 @@ const ContactSection = () => {
 							className="h-20 px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
 						/>
 					</div>
-					<div>
+					<div className="xl:col-span-2">
 						<button
 							type="submit"
 							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"

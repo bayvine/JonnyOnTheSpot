@@ -8,8 +8,8 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 	useEffect(() => {}, [isMobile])
 
 	return (
-		<div className="flex flex-col text-white bg-black rounded-lg h-80 ">
-			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2">
+		<div className="flex flex-col text-white bg-black rounded-lg h-80 xl:max-h-max xl:h-full">
+			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2 xl:h-48">
 				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
 					{serviceTitle}
 				</h3>
@@ -22,8 +22,8 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 					/>
 				</div>
 			</div>
-			<article className="w-full text-white bg-black rounded-b-lg h-1/2">
-				<p className="p-4">{serviceDescr}</p>
+			<article className="w-full text-white bg-black rounded-b-lg h-1/2 xl:h-fit">
+				<p className="p-4 xl:py-12 xl:text-lg">{serviceDescr}</p>
 			</article>
 		</div>
 	)
@@ -69,29 +69,33 @@ const ServicesSection = () => {
 		},
 	]
 	return (
-		<SectionWrapper className="px-4 py-20 bg-white" id="services">
-			<SectionTitle
-				title="BARTENDING SERVICES TAILORED TO YOUR NEEDS"
-				subtitle="our services"
-			/>
-			<div className="py-8">
-				<p className="">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-				</p>
-				<button
-					onClick={() =>
-						document
-							.getElementById("pricesheet")
-							.scrollIntoView({ behavior: "smooth" })
-					}
-					className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
-				>
-					View prices
-				</button>
+		<SectionWrapper className="px-4 py-20 bg-white xl:py-8" id="services">
+			<div className="xl:flex xl:flex-row xl:justify-between xl:items-baseline ">
+				<SectionTitle
+					title="BARTENDING SERVICES TAILORED TO YOUR NEEDS"
+					subtitle="our services"
+					className="xl:max-w-xl"
+				/>
+				<div className="py-8">
+					<p className="lg:text-lg xl:max-w-lg">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					</p>
+					<button
+						onClick={() =>
+							document
+								.getElementById("pricesheet")
+								.scrollIntoView({ behavior: "smooth" })
+						}
+						className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
+					>
+						View prices
+					</button>
+				</div>
 			</div>
-			<div className="flex flex-col gap-4 sm:grid sm:grid-cols-2">
+
+			<div className="flex flex-col gap-4 border md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{services.map((service, index) => {
 					return (
 						<ServiceCard

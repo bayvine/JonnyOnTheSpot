@@ -1,18 +1,31 @@
+import clsx from "clsx"
 import React from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 
-const TestimonialCard = ({ imgSrc, imgAlt, subtitle, quote, clientDescr }) => {
+const TestimonialCard = ({
+	imgSrc,
+	imgAlt,
+	subtitle,
+	quote,
+	clientDescr,
+	className,
+}) => {
 	return (
-		<div className="flex flex-col items-center gap-8 sm:items-start">
+		<div
+			className={clsx([
+				"flex flex-col items-center gap-8 sm:items-start md:grid md:grid-cols-2 xl:flex xl:flex-row",
+				className,
+			])}
+		>
 			<img
 				src={imgSrc}
 				alt={imgAlt}
 				width={250}
 				height={250}
-				className="object-cover aspect-square"
+				className="object-cover aspect-square lg:h-full xl:aspect-auto"
 			/>
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 xl:max-w-xs">
 				<span className="text-2xl font-bold uppercase text-roux font-title ">
 					{subtitle}
 				</span>
@@ -61,7 +74,7 @@ const TestimonialSection = () => {
 	return (
 		<SectionWrapper className="px-4 py-8 mt-20" id="testimonials">
 			<SectionTitle subtitle="Satisfied clients" title="Testimonials" />
-			<div className="grid grid-cols-1 gap-8 my-12 ">
+			<div className="grid grid-cols-1 gap-8 my-12 lg:grid-cols-1 xl:flex xl:flex-col xl:gap-24">
 				{testimonials.map((item, index) => {
 					return (
 						<TestimonialCard
@@ -71,6 +84,9 @@ const TestimonialSection = () => {
 							subtitle={item.oneliner}
 							quote={item.testimonial}
 							clientDescr={item.client}
+							className={`${index == 1 && "self-end"} ${
+								index == testimonials.length - 1 && "ml-14"
+							}`}
 						/>
 					)
 				})}

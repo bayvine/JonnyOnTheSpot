@@ -6,7 +6,7 @@ import SectionWrapper from "../components/SectionWrapper"
 
 const Hamburger = ({ handleClick, closed }) => {
 	return (
-		<button onClick={handleClick} className="">
+		<button onClick={handleClick} className="md:hidden">
 			{closed ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -47,44 +47,35 @@ const Navigation = () => {
 	return (
 		<>
 			<nav className="fixed top-0 left-0 z-40 w-full text-white bg-black">
-				<SectionWrapper
+				<section
 					id="navigation"
 					className="flex items-center justify-between w-full px-4 py-4 "
 				>
-					<div className="text-xl uppercase font-title text-gold">
+					<div className="text-xl uppercase font-title text-gold w-fit">
 						JonnyOnTheSpot
 					</div>
 					<div className="">
-						<ul className="hidden">
+						<ul className="hidden md:flex md:items-center md:gap-4">
 							<li>
-								<Link onClick={handleMenu} href="#about-us">
-									About us
-								</Link>
+								<Link href="#about-us">About us</Link>
 							</li>
 							<li>
-								<Link onClick={handleMenu} href="#services">
-									Services
-								</Link>
+								<Link href="#services">Services</Link>
 							</li>
 							<li>
-								<Link onClick={handleMenu} href="#pricesheet">
-									Price sheet
-								</Link>
+								<Link href="#pricesheet">Price sheet</Link>
 							</li>
 							<li>
-								<Link onClick={handleMenu} href="#testimonials">
-									Testimonials
-								</Link>
+								<Link href="#testimonials">Testimonials</Link>
 							</li>
 							<li>
 								<button
 									onClick={() => {
-										handleMenu()
 										document
 											.getElementById("contact-us")
 											.scrollIntoView({ behavior: "smooth" })
 									}}
-									className="uppercase rounded-md bg-[#F8DDA4] px-10 w-full text-black py-3 border border-transparent font-title "
+									className="uppercase rounded-md bg-[#F8DDA4]  md:px-6 px-10 w-full text-black py-3 border border-transparent font-title "
 								>
 									Contact us
 								</button>
@@ -92,7 +83,7 @@ const Navigation = () => {
 						</ul>
 						<Hamburger handleClick={() => setMobileMenu((prev) => !prev)} />
 					</div>
-				</SectionWrapper>
+				</section>
 			</nav>
 			<div
 				className={clsx([

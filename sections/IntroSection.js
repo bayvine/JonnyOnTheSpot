@@ -14,17 +14,18 @@ const IntroSection = () => {
 		}
 	}, [])
 	return (
-		<SectionWrapper className="relative top-0 left-0 flex items-center justify-center min-h-screen bg-black ">
-			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4">
-				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title">
+		<SectionWrapper className="relative top-0 left-0 min-h-screen bg-black md:py-20">
+			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4 lg:gap-4 xl:max-w-4xl xl:mx-auto">
+				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title lg:text-6xl xl:text-8xl">
 					JonnyOnTheSpot
 				</h1>
 				<GoldenHorizontalLine />
-				<p className="text-center text-white uppercase font-title">
-					on the spot bartending for weddings and private events serving the bay
-					area, ca
+				<p className="text-center text-white uppercase font-title xl:text-4xl">
+					<span className="text-gold">on the spot bartending</span> for{" "}
+					<u>weddings</u> and <u>private events</u> serving
+					<span className="text-gold">the bay area, ca</span>
 				</p>
-				<div className="pt-12 text-white">
+				<div className="pt-12 text-white 2xl:text-xl">
 					{services.map((service, index) => {
 						return (
 							<span key={index}>
@@ -56,7 +57,7 @@ const IntroSection = () => {
 						View prices
 					</button>
 				</div>
-				<div className="flex justify-center gap-2 mt-auto justify-self-end">
+				<div className="flex justify-center gap-2 mt-auto justify-self-end md:gap-4">
 					<a
 						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
 						target="_blank"

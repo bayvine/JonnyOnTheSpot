@@ -16,7 +16,6 @@ export default function Home() {
 			<Head>
 				<title>JonnyOnTheSpot | Mobile Bar serving Bay Area, CA</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 			</Head>
 			<Navigation />
 			<IntroSection />
@@ -27,6 +26,7 @@ export default function Home() {
 			<GallerySection />
 			<ContactSection />
 			<Footer />
+			<Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 		</div>
 	)
 }

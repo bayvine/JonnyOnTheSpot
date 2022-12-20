@@ -45,8 +45,7 @@
 
 @font-face {
 	font-family: Raleway;
-	src: url("/fonts/Raleway/Raleway-Regular.woff") format("woff"),
-		url("/fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+	src: url("/fonts/Raleway/Raleway-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -171,9 +170,9 @@
 
 @font-face {
 	font-family: Bodoni Moda;
-	src: url("/fonts/BodoniModa.ttf") format("truetype");
+	src: url("/fonts/Bodoni_Moda/BodoniModa.ttf") format("truetype");
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 200;
 	font-display: swap;
 }
 
@@ -193,7 +192,7 @@ body {
 
 .font-title {
 	font-family: "Bodoni Moda", "sans-serif";
-	font-weight: 100;
+	font-weight: 200;
 }
 a {
 	color: inherit;

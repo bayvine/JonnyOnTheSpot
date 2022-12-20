@@ -15,6 +15,7 @@ export default function Home() {
 			<Head>
 				<title>JonnyOnTheSpot | Mobile Bar serving Bay Area, CA</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 			</Head>
 			<Navigation />
 			<IntroSection />

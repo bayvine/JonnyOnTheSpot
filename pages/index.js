@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Script from "next/script"
 import AboutSection from "../sections/AboutSection"
 import ContactSection from "../sections/ContactSection"
 import Footer from "../sections/Footer"
@@ -15,7 +16,7 @@ export default function Home() {
 			<Head>
 				<title>JonnyOnTheSpot | Mobile Bar serving Bay Area, CA</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+				<Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 			</Head>
 			<Navigation />
 			<IntroSection />

@@ -1,10 +1,13 @@
-import { useLayoutEffect, useState } from "react"
+import { useLayoutEffect, useState, useEffect } from "react"
 import debounce from "lodash/debounce"
+
+const canUseDOM = typeof window !== "undefined"
+const useIsomorphicLayoutEffect = canUseDOM ? useLayoutEffect : useEffect
 
 const useIsMobile = () => {
 	const [isMobile, setIsMobile] = useState(false)
 
-	useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		const updateSize = () => {
 			setIsMobile(window.innerWidth < 768)
 		}

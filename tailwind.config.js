@@ -4,6 +4,7 @@ module.exports = {
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
 		"./sections/**/*.{js,ts,jsx,tsx}",
+		"./slices/**/*.{js,ts,jsx,tsx}",
 	],
 	fontFamily: {
 		sans: ["Bodoni Moda", "sans-serif"],

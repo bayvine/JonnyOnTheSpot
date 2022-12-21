@@ -1,5 +1,251 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "about_section": {
+        "library": "slices",
+        "id": "about_section",
+        "name": "AboutSection",
+        "description": "AboutSection",
+        "model": {
+          "id": "about_section",
+          "type": "SharedSlice",
+          "name": "AboutSection",
+          "description": "AboutSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AboutSection",
+              "primary": {
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "about_us_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "about us description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "about_us_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "about us image",
+                    "constraint": {
+                      "width": 400,
+                      "height": 600
+                    },
+                    "thumbnails": []
+                  }
+                },
+                "primary_button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "primary button",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "secondary button",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "subtitle": "corner",
+              "title": "disease",
+              "about_us_description": [
+                {
+                  "type": "paragraph",
+                  "text": "Non aliqua cupidatat enim qui nulla ut in deserunt elit culpa enim ad qui enim ad.",
+                  "spans": []
+                }
+              ],
+              "about_us_image": {
+                "dimensions": {
+                  "width": 400,
+                  "height": 600
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+              },
+              "primary_button": "tip",
+              "secondary_button": "element"
+            },
+            "slice_type": "about_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/AboutSection/default/preview.png",
+            "width": 1234,
+            "height": 828
+          }
+        }
+      },
+      "intro_section": {
+        "library": "slices",
+        "id": "intro_section",
+        "name": "IntroSection",
+        "description": "IntroSection",
+        "model": {
+          "id": "intro_section",
+          "type": "SharedSlice",
+          "name": "IntroSection",
+          "description": "IntroSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "IntroSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "JONNYONTHESPOT",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "subtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": "on the spot bartending for wed...",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "primary_button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Primary button",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_button": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Secondary button",
+                    "placeholder": ""
+                  }
+                },
+                "video_background": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Video background",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                }
+              },
+              "items": {
+                "summarized_service": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Summarized service",
+                    "placeholder": "e.g. Cocktails, parties, weddings",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "summarized_service": [
+                  {
+                    "type": "paragraph",
+                    "text": "Amet sunt occaecat sunt dolor proident deserunt aliqua nostrud pariatur labore incididunt.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Porch",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Nisi irure et fugiat nisi laborum do ullamco ex elit minim. Consequat exercitation ipsum est enim sit veniam qui dolor aliqua esse voluptate laboris fugiat magna.",
+                  "spans": []
+                }
+              ],
+              "primary_button": "musical",
+              "secondary_button": "weather",
+              "video_background": {
+                "link_type": "Media",
+                "name": "mock",
+                "kind": "image",
+                "url": "https://source.unsplash.com/random",
+                "size": "10kB"
+              }
+            },
+            "slice_type": "intro_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/IntroSection/default/preview.png",
+            "width": 1492,
+            "height": 1149
+          }
+        }
+      }
+    }
   }
 }

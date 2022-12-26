@@ -1,0 +1,66 @@
+{
+  "id": "testimonial_section",
+  "type": "SharedSlice",
+  "name": "TestimonialSection",
+  "description": "TestimonialSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TestimonialSection",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "testimonial_image": {
+          "type": "Image",
+          "config": {
+            "label": "Testimonial image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "testimonial_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonial description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "testimonial_one_liner": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial one liner",
+            "placeholder": ""
+          }
+        },
+        "testimonial_author": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial author ",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

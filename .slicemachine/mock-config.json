@@ -1,5 +1,78 @@
 {
   "_cts": {
-    "intro_section": {}
+    "intro_section": {},
+    "home_page": {}
+  },
+  "slices": {
+    "IntroSection": {
+      "default": {
+        "primary": {
+          "subtitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "summarized_service": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "AboutSection": {
+      "default": {
+        "primary": {
+          "about_us_description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "ServicesSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "PriceSection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TestimonialSection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "GallerySection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ContactSection": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

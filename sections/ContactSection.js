@@ -1,9 +1,10 @@
+import { PrismicRichText, PrismicText } from "@prismicio/react"
 import React, { useState } from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 import useIsMobile from "../utils/useIsMobile"
 
-const ContactSection = () => {
+const ContactSection = ({ slice }) => {
 	const isMobile = useIsMobile()
 	const [email, setEmail] = useState("")
 	const [emailError, setEmailError] = useState(false)
@@ -100,27 +101,32 @@ const ContactSection = () => {
 			<div className="xl:max-w-2xl sm:max-w-md sm:mx-auto xl:text-center">
 				<SectionTitle
 					negative
-					subtitle="Contact us"
-					title="Get a quote and boost your next event"
+					subtitle={slice.primary.subtitle}
+					title={<PrismicText field={slice.primary.title} />}
 					hasUnderline
 					align={isMobile ? "left" : "center"}
 				/>
 				<div className="relative z-10 py-5 text-2xl font-medium uppercase font-title xl:text-center ">
-					Call us at{" "}
-					<a href="tel:+19253216569" className="underline text-gold">
-						(926)-321-6569
-					</a>{" "}
-					or email us at{" "}
-					<a
-						href="mailto:bronnylang@outlook.com"
-						className="underline text-gold"
-					>
-						Bronnylang@outlook.com
-					</a>
+					{
+						<PrismicRichText
+							field={slice.primary.contact_us_description}
+							components={{
+								hyperlink: ({ children, node }) => {
+									return (
+										<a href={node.data.url} className="underline text-gold">
+											{children}
+										</a>
+									)
+								},
+							}}
+						/>
+					}
 				</div>
-				<span className="relative z-10 text-white">
-					Or fill out the form below, and we'll get back to you immediately.
-				</span>
+				{slice.primary.show_form && (
+					<span className="relative z-10 text-white">
+						Or fill out the form below, and we'll get back to you immediately.
+					</span>
+				)}
 			</div>
 
 			{success ? (
@@ -129,109 +135,111 @@ const ContactSection = () => {
 					Thank you for your patience.
 				</div>
 			) : (
-				<form
-					name="contact"
-					method="POST"
-					data-netlify="true"
-					onSubmit={submit}
-					className="relative z-10 grid grid-cols-1 gap-4 my-6 sm:max-w-md sm:mx-auto xl:grid-cols-2 xl:max-w-xl"
-					data-netlify-honeypot="bot-field"
-				>
-					{formError && <span className="text-red-400">{formError}</span>}
-					<input
-						type="hidden"
-						name="subject"
-						value="Inquiry from JonnyOnTheSpot website!"
-					/>
-					<input type="hidden" name="JonnyOnTheSpot" value="contact" />
+				slice.primary.show_form && (
+					<form
+						name="contact"
+						method="POST"
+						data-netlify="true"
+						onSubmit={submit}
+						className="relative z-10 grid grid-cols-1 gap-4 my-6 sm:max-w-md sm:mx-auto xl:grid-cols-2 xl:max-w-xl"
+						data-netlify-honeypot="bot-field"
+					>
+						{formError && <span className="text-red-400">{formError}</span>}
+						<input
+							type="hidden"
+							name="subject"
+							value="Inquiry from JonnyOnTheSpot website!"
+						/>
+						<input type="hidden" name="JonnyOnTheSpot" value="contact" />
 
-					<div className="flex flex-col gap-2">
-						<label htmlFor="name">Name*</label>
-						<input
-							value={name}
-							onChange={(e) => setName(e.target.value)}
-							placeholder="John Doe..."
-							name="name"
-							id="name"
-							type="text"
-							className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
-							required
-						/>
-						{nameError && (
-							<span className="text-red-400">Please fill in your name!</span>
-						)}
-					</div>
-					<div className="flex flex-col gap-2">
-						<label htmlFor="email">Email*</label>
-						<input
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-							placeholder="John@doe.com..."
-							name="email"
-							id="email"
-							type="text"
-							className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
-							required
-						/>
-						{emailError && (
-							<span className="text-red-400">
-								Please provide a valid email!
-							</span>
-						)}
-					</div>
-					<div className="flex flex-col gap-2">
-						<label htmlFor="location">Location (optional)</label>
-						<input
-							value={location}
-							onChange={(e) => setLocation(e.target.value)}
-							placeholder="Livermoore, CA..."
-							name="location"
-							id="location"
-							type="text"
-							className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
-						/>
-					</div>
-					<div className="flex flex-col gap-2">
-						<label htmlFor="phone">Phone*</label>
-						<input
-							value={phone}
-							onChange={(e) => setPhone(e.target.value)}
-							placeholder="+1-(123)-345-6789..."
-							name="phone"
-							id="phone"
-							type="tel"
-							required
-							className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
-						/>
-						{phoneError && (
-							<span className="text-red-400">
-								Please fill in your phone number!
-							</span>
-						)}
-					</div>
-					<div className="flex flex-col gap-2 xl:col-span-2">
-						<label htmlFor="description">
-							Tell us about your event (optional)
-						</label>
-						<textarea
-							value={description}
-							onChange={(e) => setDescription(e.target.value)}
-							placeholder="e.g. Birthday party..."
-							name="description"
-							id="description"
-							type=""
-							className="h-20 px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
-						/>
-					</div>
-					<div className="xl:col-span-2">
-						<button
-							type="submit"
-							className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"
-						>
-							Submit
-						</button>
-					</div>
-				</form>
+						<div className="flex flex-col gap-2">
+							<label htmlFor="name">Name*</label>
+							<input
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+								placeholder="John Doe..."
+								name="name"
+								id="name"
+								type="text"
+								className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
+								required
+							/>
+							{nameError && (
+								<span className="text-red-400">Please fill in your name!</span>
+							)}
+						</div>
+						<div className="flex flex-col gap-2">
+							<label htmlFor="email">Email*</label>
+							<input
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								placeholder="John@doe.com..."
+								name="email"
+								id="email"
+								type="text"
+								className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
+								required
+							/>
+							{emailError && (
+								<span className="text-red-400">
+									Please provide a valid email!
+								</span>
+							)}
+						</div>
+						<div className="flex flex-col gap-2">
+							<label htmlFor="location">Location (optional)</label>
+							<input
+								value={location}
+								onChange={(e) => setLocation(e.target.value)}
+								placeholder="Livermoore, CA..."
+								name="location"
+								id="location"
+								type="text"
+								className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
+							/>
+						</div>
+						<div className="flex flex-col gap-2">
+							<label htmlFor="phone">Phone*</label>
+							<input
+								value={phone}
+								onChange={(e) => setPhone(e.target.value)}
+								placeholder="+1-(123)-345-6789..."
+								name="phone"
+								id="phone"
+								type="tel"
+								required
+								className="px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
+							/>
+							{phoneError && (
+								<span className="text-red-400">
+									Please fill in your phone number!
+								</span>
+							)}
+						</div>
+						<div className="flex flex-col gap-2 xl:col-span-2">
+							<label htmlFor="description">
+								Tell us about your event (optional)
+							</label>
+							<textarea
+								value={description}
+								onChange={(e) => setDescription(e.target.value)}
+								placeholder="e.g. Birthday party..."
+								name="description"
+								id="description"
+								type=""
+								className="h-20 px-2 py-1 text-white transition-all duration-75 ease-in bg-transparent rounded-sm outline-white outline outline-1 focus:outline-2"
+							/>
+						</div>
+						<div className="xl:col-span-2">
+							<button
+								type="submit"
+								className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"
+							>
+								Submit
+							</button>
+						</div>
+					</form>
+				)
 			)}
 
 			<div className="absolute top-0 left-0 w-full h-full bg-black/80"></div>

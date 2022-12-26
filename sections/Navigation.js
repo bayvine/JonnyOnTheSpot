@@ -41,7 +41,7 @@ const Hamburger = ({ handleClick, closed }) => {
 		</button>
 	)
 }
-const Navigation = () => {
+const Navigation = ({ pageData }) => {
 	const [mobileMenu, setMobileMenu] = useState(false)
 	const handleMenu = () => setMobileMenu((prev) => !prev)
 	return (
@@ -52,7 +52,7 @@ const Navigation = () => {
 					className="flex items-center justify-between w-full px-4 py-4 sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl sm:mx-auto"
 				>
 					<div className="text-xl uppercase font-title text-gold w-fit">
-						JonnyOnTheSpot
+						{pageData.title}
 					</div>
 					<div className="">
 						<ul className="hidden md:flex md:items-center md:gap-4 xl:gap-8">
@@ -77,7 +77,7 @@ const Navigation = () => {
 									}}
 									className="uppercase rounded-md bg-[#F8DDA4]  md:px-6 px-10 w-full text-black py-3 border border-transparent font-title "
 								>
-									Contact us
+									{pageData.cta_text}
 								</button>
 							</li>
 						</ul>
@@ -93,7 +93,7 @@ const Navigation = () => {
 			>
 				<div className="flex items-center justify-between w-full px-4 py-4">
 					<div className="text-xl uppercase text-gold font-title">
-						JONNYONTHESPOT
+						{pageData.title}
 					</div>
 					<div>
 						<Hamburger
@@ -134,7 +134,7 @@ const Navigation = () => {
 								}}
 								className="uppercase rounded-md bg-[#F8DDA4] px-10 w-full text-black py-3 border border-transparent font-title "
 							>
-								Contact us
+								{pageData.cta_text}
 							</button>
 						</li>
 					</ul>

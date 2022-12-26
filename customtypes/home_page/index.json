@@ -5,6 +5,30 @@
   "status": true,
   "json": {
     "Main": {
+      "yelp_link": {
+        "type": "Link",
+        "config": {
+          "label": "yelp link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagram_link": {
+        "type": "Link",
+        "config": {
+          "label": "instagram link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "facebook_link": {
+        "type": "Link",
+        "config": {
+          "label": "facebook link",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -15,8 +39,96 @@
             },
             "about_section": {
               "type": "SharedSlice"
+            },
+            "services_section": {
+              "type": "SharedSlice"
+            },
+            "price_section": {
+              "type": "SharedSlice"
+            },
+            "testimonial_section": {
+              "type": "SharedSlice"
+            },
+            "gallery_section": {
+              "type": "SharedSlice"
+            },
+            "contact_section": {
+              "type": "SharedSlice"
             }
           }
+        }
+      }
+    },
+    "Navigation": {
+      "cta_text": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Text",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      }
+    },
+    "Footer": {
+      "footer_title": {
+        "type": "Text",
+        "config": {
+          "label": "Footer title",
+          "placeholder": ""
+        }
+      },
+      "footer_subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Footer subtitle",
+          "placeholder": ""
+        }
+      },
+      "business_hours": {
+        "type": "Text",
+        "config": {
+          "label": "Business hours",
+          "placeholder": ""
+        }
+      },
+      "phone_number": {
+        "type": "StructuredText",
+        "config": {
+          "label": "phone number",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "email": {
+        "type": "StructuredText",
+        "config": {
+          "label": "email",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "footer_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer text",
+          "placeholder": ""
+        }
+      }
+    },
+    "SEO": {
+      "site_title": {
+        "type": "Text",
+        "config": {
+          "label": "Site title",
+          "placeholder": ""
         }
       }
     }

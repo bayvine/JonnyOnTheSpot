@@ -1,0 +1,76 @@
+{
+  "id": "services_section",
+  "type": "SharedSlice",
+  "name": "ServicesSection",
+  "description": "ServicesSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ServicesSection",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "BARTENDING SERVICES TAILOR...",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "service_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Service description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "price_button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Price button label",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "service_card_image": {
+          "type": "Image",
+          "config": {
+            "label": "Service card image ",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "service_card_title": {
+          "type": "Text",
+          "config": {
+            "label": "Service card title",
+            "placeholder": ""
+          }
+        },
+        "service_card_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Service card description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

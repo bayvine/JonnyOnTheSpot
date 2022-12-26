@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import SectionTitle from "../components/SectionTitle"
 import useIsMobile from "../utils/useIsMobile"
 import SectionWrapper from "../components/SectionWrapper"
+import { PrismicRichText, PrismicText } from "@prismicio/react"
 
 const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 	const isMobile = useIsMobile()
@@ -28,85 +29,49 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 		</div>
 	)
 }
-const ServicesSection = () => {
-	const services = [
-		{
-			title: "service",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-			image: {
-				imgSrc: "images/serviceBottles.jpg",
-				imgAlt: "Winebottles in a bucket of ice",
-			},
-		},
-		{
-			title: "service",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-			image: {
-				imgSrc: "images/serviceChatter.jpg",
-				imgAlt:
-					"Partying people talking to each other while holding drinks in their hands",
-			},
-		},
-		{
-			title: "service",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-			image: {
-				imgSrc: "images/serviceCheers.jpg",
-				imgAlt: "People cheering each other by raising their glasses",
-			},
-		},
-		{
-			title: "service",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-			image: {
-				imgSrc: "images/serviceMojito.jpg",
-				imgAlt: "Glass of Mojito drink",
-			},
-		},
-	]
+const ServicesSection = ({ slice }) => {
 	return (
 		<SectionWrapper className="px-4 py-20 bg-white xl:py-8" id="services">
 			<div className="xl:flex xl:flex-row xl:justify-between xl:items-baseline">
 				<SectionTitle
-					title="BARTENDING SERVICES TAILORED TO YOUR NEEDS"
-					subtitle="our services"
+					title={<PrismicText field={slice.primary.title} />}
+					subtitle={slice.primary.subtitle}
 					className="xl:max-w-xl 2xl:max-w-2xl"
 				/>
 				<div className="py-8">
-					<p className="lg:text-lg xl:max-w-lg 2xl:max-w-xl">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					</p>
-					<button
-						onClick={() =>
-							document
-								.getElementById("pricesheet")
-								.scrollIntoView({ behavior: "smooth" })
-						}
-						className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
-					>
-						View prices
-					</button>
+					<div className="lg:text-lg xl:max-w-lg 2xl:max-w-xl">
+						<PrismicRichText field={slice.primary.service_description} />
+					</div>
+					{slice.primary.price_button_label && (
+						<button
+							onClick={() =>
+								document
+									.getElementById("pricesheet")
+									.scrollIntoView({ behavior: "smooth" })
+							}
+							className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
+						>
+							{slice.primary.price_button_label}
+						</button>
+					)}
 				</div>
 			</div>
 
-			<div className="flex flex-col gap-4 border md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-				{services.map((service, index) => {
-					return (
-						<ServiceCard
-							key={index}
-							imgAlt={service.image.imgAlt}
-							imgSrc={service.image.imgSrc}
-							serviceDescr={service.description}
-							serviceTitle={service.title}
-						/>
-					)
-				})}
+			<div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				{Array.isArray(slice.items) &&
+					slice.items.map((service, index) => {
+						return (
+							<ServiceCard
+								key={index}
+								imgAlt={service.service_card_image.alt}
+								imgSrc={service.service_card_image.url}
+								serviceDescr={
+									<PrismicText field={service.service_card_description} />
+								}
+								serviceTitle={service.service_card_title}
+							/>
+						)
+					})}
 			</div>
 		</SectionWrapper>
 	)

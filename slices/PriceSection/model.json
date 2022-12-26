@@ -1,0 +1,88 @@
+{
+  "id": "price_section",
+  "type": "SharedSlice",
+  "name": "PriceSection",
+  "description": "PriceSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PriceSection",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "accepted_payment_method_text": {
+          "type": "Text",
+          "config": {
+            "label": "Accepted payment method text",
+            "placeholder": ""
+          }
+        },
+        "disclaimer_text": {
+          "type": "Text",
+          "config": {
+            "label": "Disclaimer text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "price_item_image": {
+          "type": "Image",
+          "config": {
+            "label": "Price Item Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "price_item_title": {
+          "type": "Text",
+          "config": {
+            "label": "Price item title",
+            "placeholder": ""
+          }
+        },
+        "price_item_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Price item description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "price_item_price": {
+          "type": "Text",
+          "config": {
+            "label": "Price item price",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

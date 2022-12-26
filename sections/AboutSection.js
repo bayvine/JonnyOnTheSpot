@@ -6,8 +6,6 @@ import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 
 const AboutSection = ({ slice }) => {
-	console.log(slice)
-
 	return (
 		<SectionWrapper className="py-24 bg-white 2xl:mt-12 xl:pt-44" id="about-us">
 			<div className="xl:flex">
@@ -31,10 +29,10 @@ const AboutSection = ({ slice }) => {
 						<PrismicRichText
 							components={{
 								list: ({ children }) => (
-									<ul className="relative z-10 py-4">{children}</ul>
+									<ul className="relative z-10 py-2">{children}</ul>
 								),
 								listItem: ({ children }) => (
-									<li className="py-3">
+									<li className="py-2">
 										<span className="flex items-center gap-2 text-gold">
 											<Check className="flex-shrink-0" /> {children}
 										</span>

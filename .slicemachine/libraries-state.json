@@ -117,6 +117,199 @@
           }
         }
       },
+      "contact_section": {
+        "library": "slices",
+        "id": "contact_section",
+        "name": "ContactSection",
+        "description": "ContactSection",
+        "model": {
+          "id": "contact_section",
+          "type": "SharedSlice",
+          "name": "ContactSection",
+          "description": "ContactSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ContactSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "contact_us_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Contact us description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "show_form": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Show form",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Plate",
+                  "spans": []
+                }
+              ],
+              "subtitle": "porch",
+              "contact_us_description": [
+                {
+                  "type": "paragraph",
+                  "text": "Laborum laboris velit mollit.",
+                  "spans": []
+                }
+              ],
+              "show_form": true
+            },
+            "slice_type": "contact_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/ContactSection/default/preview.png",
+            "width": 2860,
+            "height": 1220
+          }
+        }
+      },
+      "gallery_section": {
+        "library": "slices",
+        "id": "gallery_section",
+        "name": "GallerySection",
+        "description": "GallerySection",
+        "model": {
+          "id": "gallery_section",
+          "type": "SharedSlice",
+          "name": "GallerySection",
+          "description": "GallerySection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "GallerySection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "instagram_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Instagram text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "gallery_item": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Gallery item",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "gallery_item": {
+                  "link_type": "Media",
+                  "name": "mock",
+                  "kind": "image",
+                  "url": "https://source.unsplash.com/random",
+                  "size": "10kB"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Establish",
+                  "spans": []
+                }
+              ],
+              "subtitle": "frequently",
+              "instagram_text": "pair"
+            },
+            "slice_type": "gallery_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/GallerySection/default/preview.png",
+            "width": 1710,
+            "height": 980
+          }
+        }
+      },
       "intro_section": {
         "library": "slices",
         "id": "intro_section",
@@ -243,6 +436,422 @@
             "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/IntroSection/default/preview.png",
             "width": 1492,
             "height": 1149
+          }
+        }
+      },
+      "price_section": {
+        "library": "slices",
+        "id": "price_section",
+        "name": "PriceSection",
+        "description": "PriceSection",
+        "model": {
+          "id": "price_section",
+          "type": "SharedSlice",
+          "name": "PriceSection",
+          "description": "PriceSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PriceSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "background_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Background image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "accepted_payment_method_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Accepted payment method text",
+                    "placeholder": ""
+                  }
+                },
+                "disclaimer_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Disclaimer text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "price_item_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Price Item Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "price_item_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Price item title",
+                    "placeholder": ""
+                  }
+                },
+                "price_item_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Price item description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "price_item_price": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Price item price",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "price_item_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+                },
+                "price_item_title": "from",
+                "price_item_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Commodo labore ea id deserunt ipsum fugiat et reprehenderit reprehenderit tempor commodo.",
+                    "spans": []
+                  }
+                ],
+                "price_item_price": "writing"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Program",
+                  "spans": []
+                }
+              ],
+              "subtitle": "gain",
+              "background_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+              },
+              "accepted_payment_method_text": "honor",
+              "disclaimer_text": "mark"
+            },
+            "slice_type": "price_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/PriceSection/default/preview.png",
+            "width": 2840,
+            "height": 1198
+          }
+        }
+      },
+      "services_section": {
+        "library": "slices",
+        "id": "services_section",
+        "name": "ServicesSection",
+        "description": "ServicesSection",
+        "model": {
+          "id": "services_section",
+          "type": "SharedSlice",
+          "name": "ServicesSection",
+          "description": "ServicesSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ServicesSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "BARTENDING SERVICES TAILOR...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "service_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Service description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "price_button_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Price button label",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "service_card_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Service card image ",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "service_card_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Service card title",
+                    "placeholder": ""
+                  }
+                },
+                "service_card_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Service card description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "service_card_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+                },
+                "service_card_title": "today",
+                "service_card_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Occaecat anim magna ea occaecat commodo aute. Exercitation ex proident pariatur eu sunt cillum laborum consequat dolore. Non sit cupidatat eu nostrud pariatur ad adipisicing cupidatat excepteur non esse esse adipisicing dolore.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Fifteen",
+                  "spans": []
+                }
+              ],
+              "subtitle": "push",
+              "service_description": [
+                {
+                  "type": "paragraph",
+                  "text": "Commodo est aliqua ex labore adipisicing aliqua nostrud aliqua amet in consectetur aliquip culpa nisi. Incididunt cupidatat officia exercitation veniam ea. Ea adipisicing culpa ea ex nulla elit sit laborum eu consectetur reprehenderit tempor magna.",
+                  "spans": []
+                }
+              ],
+              "price_button_label": "goose"
+            },
+            "slice_type": "services_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/ServicesSection/default/preview.png",
+            "width": 2094,
+            "height": 1002
+          }
+        }
+      },
+      "testimonial_section": {
+        "library": "slices",
+        "id": "testimonial_section",
+        "name": "TestimonialSection",
+        "description": "TestimonialSection",
+        "model": {
+          "id": "testimonial_section",
+          "type": "SharedSlice",
+          "name": "TestimonialSection",
+          "description": "TestimonialSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TestimonialSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "testimonial_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Testimonial image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "testimonial_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Testimonial description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "testimonial_one_liner": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Testimonial one liner",
+                    "placeholder": ""
+                  }
+                },
+                "testimonial_author": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Testimonial author ",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "testimonial_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+                },
+                "testimonial_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Excepteur ipsum et dolor pariatur ipsum. Et officia mollit elit elit consequat.",
+                    "spans": []
+                  }
+                ],
+                "testimonial_one_liner": "more",
+                "testimonial_author": "biggest"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Citizen",
+                  "spans": []
+                }
+              ],
+              "subtitle": "again"
+            },
+            "slice_type": "testimonial_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/TestimonialSection/default/preview.png",
+            "width": 950,
+            "height": 644
           }
         }
       }

@@ -4,7 +4,7 @@ import SectionWrapper from "../components/SectionWrapper"
 import { FaFacebook, FaYelp, FaInstagram } from "react-icons/fa"
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 
-const IntroSection = ({ slice }) => {
+const IntroSection = ({ slice, pageData }) => {
 	const videoRef = useRef(null)
 	const services = ["Cocktails", "Non-alcoholic drinks", "Full-setup"]
 
@@ -66,29 +66,35 @@ const IntroSection = ({ slice }) => {
 					</button>
 				</div>
 				<div className="flex justify-center gap-2 mt-auto justify-self-end md:gap-4">
-					<a
-						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						<FaInstagram size={30} color="#F8DDA4" />
-					</a>
+					{pageData.instagram_link?.url && (
+						<a
+							href={pageData.instagram_link?.url}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							<FaInstagram size={30} color="#F8DDA4" />
+						</a>
+					)}
 
-					<a
-						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						<FaFacebook size={30} color="#F8DDA4" />
-					</a>
+					{pageData.facebook_link?.url && (
+						<a
+							href={pageData.facebook_link?.url}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							<FaFacebook size={30} color="#F8DDA4" />
+						</a>
+					)}
 
-					<a
-						href="https://www.instagram.com/jonnyonthespot_mobilebar/"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						<FaYelp size={30} color="#F8DDA4" />
-					</a>
+					{pageData.yelp_link?.url && (
+						<a
+							href={pageData.yelp_link?.url}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							<FaYelp size={30} color="#F8DDA4" />
+						</a>
+					)}
 				</div>
 			</div>
 			<div className="overflow-x-hidden overflow-y-hidden">

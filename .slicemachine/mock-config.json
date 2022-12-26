@@ -41,6 +41,38 @@
           }
         }
       }
+    },
+    "ServicesSection": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "PriceSection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TestimonialSection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "GallerySection": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ContactSection": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

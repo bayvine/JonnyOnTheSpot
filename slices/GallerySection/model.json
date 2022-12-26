@@ -1,0 +1,50 @@
+{
+  "id": "gallery_section",
+  "type": "SharedSlice",
+  "name": "GallerySection",
+  "description": "GallerySection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "GallerySection",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "instagram_text": {
+          "type": "Text",
+          "config": {
+            "label": "Instagram text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "gallery_item": {
+          "type": "Link",
+          "config": {
+            "label": "Gallery item",
+            "placeholder": "",
+            "select": "media"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

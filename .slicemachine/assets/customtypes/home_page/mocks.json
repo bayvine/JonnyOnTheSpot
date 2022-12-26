@@ -11,6 +11,39 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "slices": []
+    "yelp_link": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "instagram_link": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "facebook_link": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "slices": [],
+    "cta_text": "pool",
+    "title": "us",
+    "footer_title": "taste",
+    "footer_subtitle": "pie",
+    "business_hours": "fish",
+    "phone_number": [
+      {
+        "type": "paragraph",
+        "text": "Aliqua Lorem excepteur irure laborum minim qui. Quis amet mollit sint duis Lorem qui amet tempor magna. Proident mollit occaecat dolor officia dolore mollit tempor ut eu irure eu sunt ex esse.",
+        "spans": []
+      }
+    ],
+    "email": [
+      {
+        "type": "paragraph",
+        "text": "Quis occaecat sit esse adipisicing enim adipisicing veniam ullamco ex ad non aute veniam.",
+        "spans": []
+      }
+    ],
+    "footer_text": "these",
+    "site_title": "total"
   }
 }

@@ -8,6 +8,22 @@ import Footer from "../sections/Footer"
 import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
+	const localBusinessFromPrismic = page.data.localbusiness[0]
+	const localBusinessSchema = {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		name: localBusinessFromPrismic.name,
+		image: prismicH.asImageSrc(localBusinessFromPrismic.image),
+		paymentAccepted: localBusinessFromPrismic.paymentaccepted,
+		areaServed: localBusinessFromPrismic.areaserved,
+		telephone: localBusinessFromPrismic.telephone,
+		priceRange: localBusinessFromPrismic.pricerange,
+		email: localBusinessFromPrismic.email,
+		sameAs: localBusinessFromPrismic.sameas,
+		sameAs: localBusinessFromPrismic.sameas2,
+		openingHours: localBusinessFromPrismic.openinghours,
+		address: localBusinessFromPrismic.address,
+	}
 	return (
 		<div className="overflow-x-hidden">
 			<Head>
@@ -56,21 +72,7 @@ const Page = ({ page, navigation, settings }) => {
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
-						__html: `
-							{
-								"@context": "https://schema.org",
-								"@type": "LocalBusiness",
-								"name": "Jonny On The Spot", 
-								"image": "${prismicH.asImageSrc(page.data.site_image)}", 
-								"paymentAccepted": "Venmo, Credit Card, Cash, Zell", 
-								"areaServed": "Bay Area, California.", 
-								"telephone": "925-321-6569",
-								"priceRange": "$$", 
-								"email": "bronnylang@outlook.com",
-								"sameAs": "https://www.instagram.com/jonnyonthespot_mobilebar/",
-								"openingHours": "Weekly 8AM to 6PM"
-							}
-							`,
+						__html: JSON.stringify(localBusinessSchema),
 					}}
 				></script>
 			</Head>

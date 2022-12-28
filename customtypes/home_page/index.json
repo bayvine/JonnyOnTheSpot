@@ -148,6 +148,92 @@
           },
           "thumbnails": []
         }
+      },
+      "localbusiness": {
+        "type": "Group",
+        "config": {
+          "label": "Localbusiness",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "paymentaccepted": {
+              "type": "Text",
+              "config": {
+                "label": "paymentAccepted",
+                "placeholder": ""
+              }
+            },
+            "areaserved": {
+              "type": "Text",
+              "config": {
+                "label": "areaServed",
+                "placeholder": ""
+              }
+            },
+            "telephone": {
+              "type": "Text",
+              "config": {
+                "label": "telephone",
+                "placeholder": ""
+              }
+            },
+            "pricerange": {
+              "type": "Text",
+              "config": {
+                "label": "priceRange",
+                "placeholder": ""
+              }
+            },
+            "email": {
+              "type": "Text",
+              "config": {
+                "label": "email",
+                "placeholder": ""
+              }
+            },
+            "sameas": {
+              "type": "Text",
+              "config": {
+                "label": "sameAs",
+                "placeholder": ""
+              }
+            },
+            "openinghours": {
+              "type": "Text",
+              "config": {
+                "label": "openingHours",
+                "placeholder": ""
+              }
+            },
+            "sameas2": {
+              "type": "Text",
+              "config": {
+                "label": "sameAs2",
+                "placeholder": ""
+              }
+            },
+            "address": {
+              "type": "Text",
+              "config": {
+                "label": "address",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }

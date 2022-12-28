@@ -173,12 +173,139 @@ interface HomePageDocumentData {
      *
      */
     site_image: prismicT.ImageField<never>;
+    /**
+     * Localbusiness field in *Home page*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[]
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    localbusiness: prismicT.GroupField<Simplify<HomePageDocumentDataLocalbusinessItem>>;
 }
 /**
  * Slice for *Home page → Slice Zone*
  *
  */
 type HomePageDocumentDataSlicesSlice = IntroSectionSlice | AboutSectionSlice | ServicesSectionSlice | PriceSectionSlice | TestimonialSectionSlice | GallerySectionSlice | ContactSectionSlice;
+/**
+ * Item in Home page → Localbusiness
+ *
+ */
+export interface HomePageDocumentDataLocalbusinessItem {
+    /**
+     * name field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * image field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * paymentAccepted field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].paymentaccepted
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    paymentaccepted: prismicT.KeyTextField;
+    /**
+     * areaServed field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].areaserved
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    areaserved: prismicT.KeyTextField;
+    /**
+     * telephone field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].telephone
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    telephone: prismicT.KeyTextField;
+    /**
+     * priceRange field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].pricerange
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    pricerange: prismicT.KeyTextField;
+    /**
+     * email field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].email
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email: prismicT.KeyTextField;
+    /**
+     * sameAs field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].sameas
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sameas: prismicT.KeyTextField;
+    /**
+     * openingHours field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].openinghours
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    openinghours: prismicT.KeyTextField;
+    /**
+     * sameAs2 field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].sameas2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sameas2: prismicT.KeyTextField;
+    /**
+     * address field in *Home page → Localbusiness*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.localbusiness[].address
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    address: prismicT.KeyTextField;
+}
 /**
  * Home page document from Prismic
  *
@@ -849,6 +976,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, AllDocumentTypes, AboutSectionSliceDefaultPrimary, AboutSectionSliceDefault, AboutSectionSliceVariation, AboutSectionSlice, ContactSectionSliceDefaultPrimary, ContactSectionSliceDefault, ContactSectionSliceVariation, ContactSectionSlice, GallerySectionSliceDefaultPrimary, GallerySectionSliceDefaultItem, GallerySectionSliceDefault, GallerySectionSliceVariation, GallerySectionSlice, IntroSectionSliceDefaultPrimary, IntroSectionSliceDefaultItem, IntroSectionSliceDefault, IntroSectionSliceVariation, IntroSectionSlice, PriceSectionSliceDefaultPrimary, PriceSectionSliceDefaultItem, PriceSectionSliceDefault, PriceSectionSliceVariation, PriceSectionSlice, ServicesSectionSliceDefaultPrimary, ServicesSectionSliceDefaultItem, ServicesSectionSliceDefault, ServicesSectionSliceVariation, ServicesSectionSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice };
+        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocumentDataLocalbusinessItem, HomePageDocument, AllDocumentTypes, AboutSectionSliceDefaultPrimary, AboutSectionSliceDefault, AboutSectionSliceVariation, AboutSectionSlice, ContactSectionSliceDefaultPrimary, ContactSectionSliceDefault, ContactSectionSliceVariation, ContactSectionSlice, GallerySectionSliceDefaultPrimary, GallerySectionSliceDefaultItem, GallerySectionSliceDefault, GallerySectionSliceVariation, GallerySectionSlice, IntroSectionSliceDefaultPrimary, IntroSectionSliceDefaultItem, IntroSectionSliceDefault, IntroSectionSliceVariation, IntroSectionSlice, PriceSectionSliceDefaultPrimary, PriceSectionSliceDefaultItem, PriceSectionSliceDefault, PriceSectionSliceVariation, PriceSectionSlice, ServicesSectionSliceDefaultPrimary, ServicesSectionSliceDefaultItem, ServicesSectionSliceDefault, ServicesSectionSliceVariation, ServicesSectionSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice };
     }
 }

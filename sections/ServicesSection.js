@@ -3,6 +3,7 @@ import SectionTitle from "../components/SectionTitle"
 import useIsMobile from "../utils/useIsMobile"
 import SectionWrapper from "../components/SectionWrapper"
 import { PrismicRichText, PrismicText } from "@prismicio/react"
+import Image from "next/image"
 
 const ServiceCard = ({
 	imgSrc,
@@ -23,13 +24,15 @@ const ServiceCard = ({
 				</h3>
 				<div>
 					<div className="absolute top-0 z-[5] left-0 w-full h-full bg-black/40 rounded-t-lg"></div>
-					<img
+					<Image
+						placeholder="blur"
+						blurDataURL={`${imgSrc}&blur=200`}
 						width={width}
 						height={height}
 						aria-hidden
 						src={imgSrc}
 						alt={imgAlt}
-						className="absolute top-0 left-0 object-cover object-center w-full h-full rounded-t-lg aspect-[3415∶5123] "
+						className="absolute top-0 left-0 object-cover object-center w-full h-full rounded-t-lg "
 					/>
 				</div>
 			</div>

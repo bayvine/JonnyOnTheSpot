@@ -1,5 +1,6 @@
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 import clsx from "clsx"
+import Image from "next/image"
 import React from "react"
 import { FaInstagram } from "react-icons/fa"
 import SectionTitle from "../components/SectionTitle"
@@ -31,7 +32,9 @@ const GallerySection = ({ slice, pageData }) => {
 				<div className="grid grid-cols-2 gap-2 my-8 lg:grid-cols-3">
 					{slice.items.map(({ gallery_item }, index) => {
 						return (
-							<img
+							<Image
+								placeholder="blur"
+								blurDataURL={`${gallery_item.url}&blur=200`}
 								alt="Gallery item"
 								src={gallery_item.url}
 								width={gallery_item.width}
@@ -40,7 +43,7 @@ const GallerySection = ({ slice, pageData }) => {
 								className={clsx([
 									index !== 0 &&
 										index % 2 === 0 &&
-										"col-span-2 row-span-2 lg:col-span-1 lg:row-span-1",
+										"sm:col-span-2 sm:row-span-2 lg:col-span-1 lg:row-span-1",
 									index !== 0 && index % 3 === 0 && "lg:col-span-3",
 								])}
 							/>

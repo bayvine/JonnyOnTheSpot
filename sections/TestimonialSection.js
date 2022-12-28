@@ -1,5 +1,6 @@
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 import clsx from "clsx"
+import Image from "next/image"
 import React from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
@@ -19,7 +20,9 @@ const TestimonialCard = ({
 				className,
 			])}
 		>
-			<img
+			<Image
+				placeholder="blur"
+				blurDataURL={`${imgSrc}&blur=20`}
 				src={imgSrc}
 				alt={imgAlt}
 				width={250}

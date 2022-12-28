@@ -24,7 +24,7 @@ const TestimonialCard = ({
 				alt={imgAlt}
 				width={250}
 				height={250}
-				className="object-cover aspect-square lg:h-full xl:aspect-auto"
+				className="object-cover aspect-square lg:h-full xl:aspect-auto w-[250px] h-[265px]"
 			/>
 			<div className="flex flex-col gap-4 xl:max-w-xs">
 				<span className="text-2xl font-bold uppercase text-roux font-title ">

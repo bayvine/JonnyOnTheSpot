@@ -4,7 +4,11 @@ import React, { useState } from "react"
 
 const Hamburger = ({ handleClick, closed }) => {
 	return (
-		<button onClick={handleClick} className="lg:hidden">
+		<button
+			onClick={handleClick}
+			className="lg:hidden"
+			aria-label="Click to open menu"
+		>
 			{closed ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

@@ -1,18 +1,19 @@
 import { PrismicRichText, PrismicText } from "@prismicio/react"
-import clsx from "clsx"
 import Image from "next/image"
 import React from "react"
 import Check from "../components/Check"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
+import Image from "next/image"
 
 const AboutSection = ({ slice }) => {
 	return (
 		<SectionWrapper className="py-24 bg-white 2xl:mt-12 xl:pt-44" id="about-us">
 			<div className="xl:flex">
 				<div className="hidden xl:block xl:shrink-0 xl:-mt-20 xl:-mr-16 2xl:-mt-24">
-					<img
-						loading="lazy"
+					<Image
+						placeholder="blur"
+						blurDataURL={`${slice.primary.about_us_image.url}&blur=200`}
 						className="xl:aspect-[896/1344] w-[400px] 2xl:w-[380px]"
 						src={slice.primary.about_us_image.url}
 						width={slice.primary.about_us_image.dimensions.width}

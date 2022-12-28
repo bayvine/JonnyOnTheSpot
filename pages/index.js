@@ -37,7 +37,13 @@ const Page = ({ page, navigation, settings }) => {
 				<meta property="og:image:type" content="image/png"></meta>
 				<meta property="og:image" content={page.data.site_image.url}></meta>
 
+				<meta name="twitter:card" content="summary_large_image"></meta>
 				<meta name="twitter:image" content={page.data.site_image.url}></meta>
+				<meta
+					property="twitter:description"
+					content={page.data.site_description}
+				></meta>
+				<meta property="twitter:title" content={page.data.site_title}></meta>
 				<meta
 					property="og:image:width"
 					content={page.data.site_image.dimensions.width}

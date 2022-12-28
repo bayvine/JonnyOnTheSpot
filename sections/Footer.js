@@ -24,32 +24,38 @@ const Footer = ({ pageData }) => {
 					<div>
 						<span className="py-2 text-xl"> {pageData.footer_title}</span>
 						<ul>
-							<li>
-								Phone Number:
+							<li className="pt-4 pb-3">
 								<PrismicRichText
 									field={pageData.phone_number}
 									components={{
 										hyperlink: ({ children, node }) => {
 											return (
-												<a href={node.data.url} className="underline w-fit">
-													{children}
-												</a>
+												<>
+													Phone Number:{" "}
+													<a href={node.data.url} className="underline w-fit">
+														{children}
+													</a>
+												</>
 											)
 										},
 									}}
 								/>
 							</li>
-							<li>Business hours: {pageData.business_hours}</li>
-							<li>
-								Email:{" "}
+							<li className="pb-3">
+								Business hours: {pageData.business_hours}
+							</li>
+							<li className="pb-3">
 								<PrismicRichText
 									field={pageData.email}
 									components={{
 										hyperlink: ({ children, node }) => {
 											return (
-												<a href={node.data.url} className="underline w-fit">
-													{children}
-												</a>
+												<>
+													Email:{" "}
+													<a href={node.data.url} className="underline w-fit">
+														{children}
+													</a>
+												</>
 											)
 										},
 									}}
@@ -94,16 +100,16 @@ const Footer = ({ pageData }) => {
 					<div>
 						<span className="py-2 text-xl">Quicklinks</span>
 						<ul className="underline w-fit">
-							<li className="pb-2">
+							<li className="pt-4 pb-3">
 								<Link href="#about-us">About us</Link>
 							</li>
-							<li className="pb-2">
+							<li className="pb-3">
 								<Link href="#services">Services</Link>
 							</li>
-							<li className="pb-2">
+							<li className="pb-3">
 								<Link href="#pricesheet">Price sheet</Link>
 							</li>
-							<li className="pb-2">
+							<li className="pb-3">
 								<Link href="#testimonials">Testimonials</Link>
 							</li>
 							<li className="">

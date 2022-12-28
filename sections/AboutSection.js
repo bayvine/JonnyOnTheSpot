@@ -1,5 +1,4 @@
 import { PrismicRichText, PrismicText } from "@prismicio/react"
-import Image from "next/image"
 import React from "react"
 import Check from "../components/Check"
 import SectionTitle from "../components/SectionTitle"

@@ -8,6 +8,7 @@ import Footer from "../sections/Footer"
 import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
+	console.log(prismicH.asImageSrc(page.data.site_image))
 	return (
 		<div className="overflow-x-hidden">
 			<Head>
@@ -61,14 +62,14 @@ const Page = ({ page, navigation, settings }) => {
 								"@context": "https://schema.org",
 								"@type": "LocalBusiness",
 								"name": "Jonny On The Spot", 
-								"image": ${prismicH.asImageSrc(page.data.site_image.url)}, 
-								paymentAccepted: "Venmo, Credit Card, Cash, Zell", 
-								areaServed: "Bay Area, California.", 
-								telephone: "925-321-6569",
-								priceRange: "$$", 
-								email: "bronnylang@outlook.com",
-								sameAs: "https://www.instagram.com/jonnyonthespot_mobilebar/",
-								openingHours: "Weekly 8AM to 6PM"
+								"image": ${prismicH.asImageSrc(page.data.site_image)}, 
+								"paymentAccepted": "Venmo, Credit Card, Cash, Zell", 
+								"areaServed": "Bay Area, California.", 
+								"telephone": "925-321-6569",
+								"priceRange": "$$", 
+								"email": "bronnylang@outlook.com",
+								"sameAs": "https://www.instagram.com/jonnyonthespot_mobilebar/",
+								"openingHours": "Weekly 8AM to 6PM"
 							}
 							`,
 					}}

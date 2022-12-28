@@ -1,6 +1,6 @@
 import { SliceZone } from "@prismicio/react"
 import Script from "next/script"
-
+import * as prismicH from "@prismicio/helpers"
 import { createClient } from "../prismicio"
 import { components } from "../slices"
 import Navigation from "../sections/Navigation"
@@ -61,12 +61,13 @@ const Page = ({ page, navigation, settings }) => {
 								"@context": "https://schema.org",
 								"@type": "LocalBusiness",
 								"name": "Jonny On The Spot", 
-								"image": ${page.data.site_image.url}, 
+								"image": ${prismicH.asImageSrc(page.data.site_image.url)}, 
 								paymentAccepted: "Venmo, Credit Card, Cash, Zell", 
 								areaServed: "Bay Area, California.", 
 								telephone: "925-321-6569",
 								priceRange: "$$", 
 								email: "bronnylang@outlook.com",
+								sameAs: "https://www.instagram.com/jonnyonthespot_mobilebar/",
 								openingHours: "Weekly 8AM to 6PM"
 							}
 							`,

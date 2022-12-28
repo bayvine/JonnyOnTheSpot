@@ -162,6 +162,17 @@ interface HomePageDocumentData {
      *
      */
     site_description: prismicT.KeyTextField;
+    /**
+     * Site image field in *Home page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.site_image
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    site_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Home page → Slice Zone*

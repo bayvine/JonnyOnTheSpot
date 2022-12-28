@@ -137,6 +137,17 @@
           "label": "Site description",
           "placeholder": ""
         }
+      },
+      "site_image": {
+        "type": "Image",
+        "config": {
+          "label": "Site image",
+          "constraint": {
+            "width": 1200,
+            "height": 627
+          },
+          "thumbnails": []
+        }
       }
     }
   }

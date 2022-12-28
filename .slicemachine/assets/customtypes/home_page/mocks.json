@@ -13,38 +13,47 @@
   "data": {
     "yelp_link": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "http://google.com"
     },
     "instagram_link": {
       "link_type": "Web",
-      "url": "https://prismic.io"
+      "url": "http://twitter.com"
     },
     "facebook_link": {
       "link_type": "Web",
       "url": "https://slicemachine.dev"
     },
     "slices": [],
-    "cta_text": "tongue",
-    "title": "grandmother",
-    "footer_title": "again",
-    "footer_subtitle": "you",
-    "business_hours": "prize",
+    "cta_text": "minerals",
+    "title": "rain",
+    "footer_title": "eaten",
+    "footer_subtitle": "had",
+    "business_hours": "fellow",
     "phone_number": [
       {
         "type": "paragraph",
-        "text": "Velit enim est elit qui incididunt.",
+        "text": "Quis dolor aliqua et. Eiusmod aute elit voluptate Lorem excepteur exercitation ad consectetur elit ut dolore.",
         "spans": []
       }
     ],
     "email": [
       {
         "type": "paragraph",
-        "text": "Veniam ullamco officia cupidatat eiusmod nulla consequat aute in nisi. Ea duis aliqua id veniam esse laboris incididunt elit culpa tempor nostrud non do adipisicing. Ex eiusmod ut commodo non ullamco esse ex.",
+        "text": "Duis in sunt nostrud commodo qui Lorem.",
         "spans": []
       }
     ],
-    "footer_text": "word",
-    "site_title": "waste",
-    "site_description": "front"
+    "footer_text": "man",
+    "site_title": "fairly",
+    "site_description": "quick",
+    "site_image": {
+      "dimensions": {
+        "width": 1200,
+        "height": 627
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+    }
   }
 }

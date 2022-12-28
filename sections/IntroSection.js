@@ -104,7 +104,6 @@ const IntroSection = ({ slice, pageData }) => {
 				<div className="absolute right-0 bottom-0 bg-black/50 z-[1] min-w-full min-h-full overflow-hidden"></div>
 				<video
 					preload="auto"
-					poster="images/barBackground.webp"
 					ref={videoRef}
 					autoPlay
 					muted
@@ -112,7 +111,7 @@ const IntroSection = ({ slice, pageData }) => {
 					id="myVideo"
 					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden"
 				>
-					<source src={slice.primary.video_background.url} type="video/mp4" />
+					<source src={slice.primary.video_background.url} type="video/webm" />
 					<p class="vjs-no-js">
 						To view this video please enable JavaScript, and consider upgrading
 						to a web browser that{" "}

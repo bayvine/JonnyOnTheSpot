@@ -4,12 +4,28 @@ import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 import useIsMobile from "../utils/useIsMobile"
 
-const PriceItem = ({ imgSrc, imgAlt, title, description, price }) => {
+const PriceItem = ({
+	imgSrc,
+	imgAlt,
+	title,
+	description,
+	price,
+	height,
+	width,
+}) => {
 	return (
 		<div className="flex flex-col gap-4 lg:flex-row lg:items-center">
-			<img src={imgSrc} alt={imgAlt} className="w-20 h-20 bg-white " />
+			<img
+				src={imgSrc}
+				alt={imgAlt}
+				className="w-20 h-20 bg-white "
+				height={height}
+				width={width}
+			/>
 			<div>
-				<h4 className="text-2xl uppercase text-gold font-title ">{title}</h4>
+				<span className="text-2xl uppercase text-gold font-title ">
+					{title}
+				</span>
 				<span className="text-lg text-bold">{description}</span>
 			</div>
 			<div className="text-3xl uppercase text-gold font-title ">{price}</div>
@@ -40,6 +56,8 @@ const PriceSection = ({ slice }) => {
 								key={index}
 								imgSrc={price.price_item_image?.url || ""}
 								imgAlt={price.price_item_image?.alt || ""}
+								height={price.price_item_image?.dimensions?.height || ""}
+								width={price.price_item_image?.dimensions?.width || ""}
 								title={price.price_item_title}
 								description={
 									<PrismicRichText field={price.price_item_description} />

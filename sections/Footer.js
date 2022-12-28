@@ -5,17 +5,15 @@ import { FaFacebook, FaInstagram, FaYelp } from "react-icons/fa"
 import SectionWrapper from "../components/SectionWrapper"
 
 const Footer = ({ pageData }) => {
-	console.log(pageData)
-
 	return (
 		<footer className="bg-black">
 			<SectionWrapper className="relative px-4 pt-12 pb-4 text-white xl:px-0">
 				<div className="flex sm:gap-4 sm:items-center md:justify-center">
 					<hr className="hidden w-1/3 h-0.5 bg-gold sm:block" />
 					<div className="flex flex-col items-center md:text-center">
-						<h5 className="text-3xl font-bold uppercase md:text-2xl text-gold font-title ">
+						<span className="text-3xl font-bold uppercase md:text-2xl text-gold font-title ">
 							{pageData.footer_title}
-						</h5>
+						</span>
 						<span className="text-gold font-title ">
 							{pageData.footer_subtitle}
 						</span>
@@ -24,7 +22,7 @@ const Footer = ({ pageData }) => {
 				</div>
 				<div className="flex flex-col gap-8 my-12 md:flex-row md:justify-between">
 					<div>
-						<h5 className="py-2 text-xl"> {pageData.footer_title}</h5>
+						<span className="py-2 text-xl"> {pageData.footer_title}</span>
 						<ul>
 							<li>
 								Phone Number:
@@ -64,6 +62,7 @@ const Footer = ({ pageData }) => {
 									href={pageData.instagram_link?.url}
 									target="_blank"
 									rel="noreferrer noopener"
+									aria-label="Instagram"
 								>
 									<FaInstagram size={30} color="white" />
 								</a>
@@ -74,6 +73,7 @@ const Footer = ({ pageData }) => {
 									href={pageData.facebook_link?.url}
 									target="_blank"
 									rel="noreferrer noopener"
+									aria-label="Facebook"
 								>
 									<FaFacebook size={30} color="white" />
 								</a>
@@ -84,6 +84,7 @@ const Footer = ({ pageData }) => {
 									href={pageData.yelp_link?.url}
 									target="_blank"
 									rel="noreferrer noopener"
+									aria-label="Yelp"
 								>
 									<FaYelp size={30} color="white" />
 								</a>
@@ -91,7 +92,7 @@ const Footer = ({ pageData }) => {
 						</div>
 					</div>
 					<div>
-						<h5 className="py-2 text-xl">Quicklinks</h5>
+						<span className="py-2 text-xl">Quicklinks</span>
 						<ul className="underline w-fit">
 							<li>
 								<Link href="#about-us">About us</Link>

@@ -17,33 +17,34 @@
     },
     "instagram_link": {
       "link_type": "Web",
-      "url": "http://google.com"
+      "url": "https://prismic.io"
     },
     "facebook_link": {
       "link_type": "Web",
-      "url": "http://google.com"
+      "url": "https://slicemachine.dev"
     },
     "slices": [],
-    "cta_text": "pool",
-    "title": "us",
-    "footer_title": "taste",
-    "footer_subtitle": "pie",
-    "business_hours": "fish",
+    "cta_text": "tongue",
+    "title": "grandmother",
+    "footer_title": "again",
+    "footer_subtitle": "you",
+    "business_hours": "prize",
     "phone_number": [
       {
         "type": "paragraph",
-        "text": "Aliqua Lorem excepteur irure laborum minim qui. Quis amet mollit sint duis Lorem qui amet tempor magna. Proident mollit occaecat dolor officia dolore mollit tempor ut eu irure eu sunt ex esse.",
+        "text": "Velit enim est elit qui incididunt.",
         "spans": []
       }
     ],
     "email": [
       {
         "type": "paragraph",
-        "text": "Quis occaecat sit esse adipisicing enim adipisicing veniam ullamco ex ad non aute veniam.",
+        "text": "Veniam ullamco officia cupidatat eiusmod nulla consequat aute in nisi. Ea duis aliqua id veniam esse laboris incididunt elit culpa tempor nostrud non do adipisicing. Ex eiusmod ut commodo non ullamco esse ex.",
         "spans": []
       }
     ],
-    "footer_text": "these",
-    "site_title": "total"
+    "footer_text": "word",
+    "site_title": "waste",
+    "site_description": "front"
   }
 }

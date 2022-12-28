@@ -5,10 +5,15 @@ import { createClient } from "../prismicio"
 import { components } from "../slices"
 import Navigation from "../sections/Navigation"
 import Footer from "../sections/Footer"
+import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
 	return (
 		<div className="overflow-x-hidden">
+			<Head>
+				<title>{page.data.site_title}</title>
+				<meta name="description" content={page.data.site_description}></meta>
+			</Head>
 			<Navigation pageData={page.data} />
 			<SliceZone
 				slices={page.data.slices}

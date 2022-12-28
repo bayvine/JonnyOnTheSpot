@@ -130,6 +130,13 @@
           "label": "Site title",
           "placeholder": ""
         }
+      },
+      "site_description": {
+        "type": "Text",
+        "config": {
+          "label": "Site description",
+          "placeholder": ""
+        }
       }
     }
   }

@@ -32,7 +32,10 @@ const GallerySection = ({ slice, pageData }) => {
 					{slice.items.map(({ gallery_item }, index) => {
 						return (
 							<img
+								alt="Gallery item"
 								src={gallery_item.url}
+								width={gallery_item.width}
+								height={gallery_item.height}
 								key={index}
 								className={clsx([
 									index !== 0 &&

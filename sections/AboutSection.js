@@ -1,5 +1,6 @@
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 import clsx from "clsx"
+import Image from "next/image"
 import React from "react"
 import Check from "../components/Check"
 import SectionTitle from "../components/SectionTitle"
@@ -11,8 +12,11 @@ const AboutSection = ({ slice }) => {
 			<div className="xl:flex">
 				<div className="hidden xl:block xl:shrink-0 xl:-mt-20 xl:-mr-16 2xl:-mt-24">
 					<img
+						loading="lazy"
 						className="xl:aspect-[896/1344] w-[400px] 2xl:w-[380px]"
 						src={slice.primary.about_us_image.url}
+						width={slice.primary.about_us_image.dimensions.width}
+						height={slice.primary.about_us_image.dimensions.height}
 						alt={slice.primary.about_us_image.alt}
 					/>
 				</div>
@@ -68,11 +72,6 @@ const AboutSection = ({ slice }) => {
 					<div className="absolute top-0 left-0 w-full h-full bg-black/80"></div>
 				</div>
 			</div>
-			<img
-				className="relative hidden"
-				src="images/pourIn.jpg"
-				alt="Hand pouring in Jack daniels in cup"
-			/>
 		</SectionWrapper>
 	)
 }

@@ -4,7 +4,14 @@ import useIsMobile from "../utils/useIsMobile"
 import SectionWrapper from "../components/SectionWrapper"
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 
-const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
+const ServiceCard = ({
+	imgSrc,
+	imgAlt,
+	serviceTitle,
+	serviceDescr,
+	width,
+	height,
+}) => {
 	const isMobile = useIsMobile()
 	useEffect(() => {}, [isMobile])
 
@@ -17,9 +24,12 @@ const ServiceCard = ({ imgSrc, imgAlt, serviceTitle, serviceDescr }) => {
 				<div>
 					<div className="absolute top-0 z-[5] left-0 w-full h-full bg-black/40 rounded-t-lg"></div>
 					<img
+						width={width}
+						height={height}
+						aria-hidden
 						src={imgSrc}
 						alt={imgAlt}
-						className="absolute top-0 left-0 object-cover object-center w-full h-full rounded-t-lg "
+						className="absolute top-0 left-0 object-cover object-center w-full h-full rounded-t-lg aspect-[3415∶5123] "
 					/>
 				</div>
 			</div>
@@ -69,6 +79,8 @@ const ServicesSection = ({ slice }) => {
 									<PrismicText field={service.service_card_description} />
 								}
 								serviceTitle={service.service_card_title}
+								height={service.service_card_image?.dimensions?.height || ""}
+								width={service.service_card_image?.dimensions?.width || ""}
 							/>
 						)
 					})}

@@ -17,9 +17,8 @@ module.exports = {
 				roux: "#813405",
 			},
 			backgroundImage: {
-				"background-sand": "url('/images/backgroundSand.jpg')",
-				"background-bar": "url('/images/barBackground.jpg')",
-				"background-tap": "url('/images/tapBackground.jpg')",
+				"background-sand": "url('/images/backgroundSand.webp')",
+				"background-bar": "url('/images/barBackground.webp')",
 			},
 		},
 	},

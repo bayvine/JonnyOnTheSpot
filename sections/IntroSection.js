@@ -17,7 +17,7 @@ const IntroSection = ({ slice, pageData }) => {
 	return (
 		<SectionWrapper className="relative top-0 left-0 min-h-screen sm:min-h-[750px] sm:flex sm:justify-center sm:items-center bg-black md:py-20">
 			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4 lg:gap-4 xl:max-w-4xl xl:mx-auto">
-				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title lg:text-6xl xl:text-8xl">
+				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title md:text-6xl xl:text-8xl">
 					<PrismicText field={slice.primary.title} />
 				</h1>
 				<GoldenHorizontalLine />
@@ -71,6 +71,7 @@ const IntroSection = ({ slice, pageData }) => {
 							href={pageData.instagram_link?.url}
 							target="_blank"
 							rel="noreferrer noopener"
+							aria-label="Instagram"
 						>
 							<FaInstagram size={30} color="#F8DDA4" />
 						</a>
@@ -81,6 +82,7 @@ const IntroSection = ({ slice, pageData }) => {
 							href={pageData.facebook_link?.url}
 							target="_blank"
 							rel="noreferrer noopener"
+							aria-label="Facebook"
 						>
 							<FaFacebook size={30} color="#F8DDA4" />
 						</a>
@@ -91,6 +93,7 @@ const IntroSection = ({ slice, pageData }) => {
 							href={pageData.yelp_link?.url}
 							target="_blank"
 							rel="noreferrer noopener"
+							aria-label="Yelp"
 						>
 							<FaYelp size={30} color="#F8DDA4" />
 						</a>

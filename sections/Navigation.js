@@ -1,12 +1,10 @@
 import clsx from "clsx"
 import Link from "next/link"
 import React, { useState } from "react"
-import { FaHamburger } from "react-icons/fa"
-import SectionWrapper from "../components/SectionWrapper"
 
 const Hamburger = ({ handleClick, closed }) => {
 	return (
-		<button onClick={handleClick} className="md:hidden">
+		<button onClick={handleClick} className="lg:hidden">
 			{closed ? (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +53,7 @@ const Navigation = ({ pageData }) => {
 						{pageData.title}
 					</div>
 					<div className="">
-						<ul className="hidden md:flex md:items-center md:gap-4 xl:gap-8">
+						<ul className="hidden lg:flex md:items-center md:gap-4 xl:gap-8">
 							<li>
 								<Link href="#about-us">About us</Link>
 							</li>

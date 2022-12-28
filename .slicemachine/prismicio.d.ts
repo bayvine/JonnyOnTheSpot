@@ -151,6 +151,17 @@ interface HomePageDocumentData {
      *
      */
     site_title: prismicT.KeyTextField;
+    /**
+     * Site description field in *Home page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.site_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    site_description: prismicT.KeyTextField;
 }
 /**
  * Slice for *Home page → Slice Zone*

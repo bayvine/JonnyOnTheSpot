@@ -8,7 +8,6 @@ import Footer from "../sections/Footer"
 import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
-	console.log(page.data.site_image)
 	return (
 		<div className="overflow-x-hidden">
 			<Head>
@@ -40,7 +39,7 @@ const Page = ({ page, navigation, settings }) => {
 				<meta name="twitter:card" content="summary_large_image"></meta>
 				<meta name="twitter:image" content={page.data.site_image.url}></meta>
 				<meta
-					property="twitter:description"
+					name="twitter:description"
 					content={page.data.site_description}
 				></meta>
 				<meta property="twitter:title" content={page.data.site_title}></meta>

@@ -8,7 +8,6 @@ import Footer from "../sections/Footer"
 import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
-	console.log(prismicH.asImageSrc(page.data.site_image))
 	return (
 		<div className="overflow-x-hidden">
 			<Head>
@@ -62,7 +61,7 @@ const Page = ({ page, navigation, settings }) => {
 								"@context": "https://schema.org",
 								"@type": "LocalBusiness",
 								"name": "Jonny On The Spot", 
-								"image": ${prismicH.asImageSrc(page.data.site_image)}, 
+								"image": "${prismicH.asImageSrc(page.data.site_image)}", 
 								"paymentAccepted": "Venmo, Credit Card, Cash, Zell", 
 								"areaServed": "Bay Area, California.", 
 								"telephone": "925-321-6569",

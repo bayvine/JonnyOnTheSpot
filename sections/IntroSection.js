@@ -112,7 +112,7 @@ const IntroSection = ({ slice, pageData }) => {
 					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden"
 				>
 					<source src={slice.primary.video_background.url} type="video/webm" />
-					<p class="vjs-no-js">
+					<p>
 						To view this video please enable JavaScript, and consider upgrading
 						to a web browser that{" "}
 						<a href="https://videojs.com/html5-video-support/" target="_blank">

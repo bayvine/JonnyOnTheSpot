@@ -33,8 +33,7 @@ const GallerySection = ({ slice, pageData }) => {
 					{slice.items.map(({ gallery_item }, index) => {
 						return (
 							<Image
-								placeholder="blur"
-								blurDataURL={`${gallery_item.url}&blur=200`}
+								loading="lazy"
 								alt="Gallery item"
 								src={gallery_item.url}
 								width={gallery_item.width}

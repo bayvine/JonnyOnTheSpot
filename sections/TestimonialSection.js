@@ -4,7 +4,7 @@ import Image from "next/image"
 import React from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
-
+import { motion } from "framer-motion"
 const TestimonialCard = ({
 	imgSrc,
 	imgAlt,
@@ -13,8 +13,27 @@ const TestimonialCard = ({
 	clientDescr,
 	className,
 }) => {
+	const cardAnim = {
+		hidden: {
+			opacity: 0,
+			x: -20,
+		},
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 0.5,
+			},
+		},
+	}
 	return (
-		<div
+		<motion.div
+			viewport={{
+				once: true,
+			}}
+			variants={cardAnim}
+			initial="hidden"
+			whileInView="visible"
 			className={clsx([
 				"flex flex-col items-center gap-8 sm:items-start md:grid md:grid-cols-2 xl:flex xl:flex-row xl:gap-12",
 				className,
@@ -39,17 +58,35 @@ const TestimonialCard = ({
 					{clientDescr}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 const TestimonialSection = ({ slice }) => {
+	const testimonialWrapper = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.8,
+				delay: 0.3,
+			},
+		},
+	}
 	return (
 		<SectionWrapper className="px-4 py-8 mt-20" id="testimonials">
 			<SectionTitle
 				subtitle={slice.primary.subtitle}
 				title={<PrismicText field={slice.primary.title} />}
 			/>
-			<div className="grid grid-cols-1 gap-8 my-12 lg:grid-cols-1 xl:flex xl:flex-col xl:gap-24">
+			<motion.div
+				viewport={{ once: true }}
+				initial="hidden"
+				whileInView="visible"
+				variants={testimonialWrapper}
+				className="grid grid-cols-1 gap-8 my-12 lg:grid-cols-1 xl:flex xl:flex-col xl:gap-24"
+			>
 				{Array.isArray(slice.items) &&
 					slice.items.map((item, index) => {
 						return (
@@ -66,7 +103,7 @@ const TestimonialSection = ({ slice }) => {
 							/>
 						)
 					})}
-			</div>
+			</motion.div>
 		</SectionWrapper>
 	)
 }

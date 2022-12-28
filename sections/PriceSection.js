@@ -3,6 +3,8 @@ import React, { useEffect } from "react"
 import SectionTitle from "../components/SectionTitle"
 import SectionWrapper from "../components/SectionWrapper"
 import useIsMobile from "../utils/useIsMobile"
+import { motion } from "framer-motion"
+import { fadeIn } from "../utils/animations"
 
 const PriceItem = ({
 	imgSrc,
@@ -13,8 +15,18 @@ const PriceItem = ({
 	height,
 	width,
 }) => {
+	const card = {
+		hidden: { opacity: 0, x: -100 },
+		visible: {
+			opacity: 1,
+			x: 0,
+		},
+	}
 	return (
-		<div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+		<motion.div
+			variants={card}
+			className="flex flex-col gap-4 lg:flex-row lg:items-center"
+		>
 			<img
 				src={imgSrc}
 				alt={imgAlt}
@@ -29,13 +41,24 @@ const PriceItem = ({
 				<span className="text-lg text-bold">{description}</span>
 			</div>
 			<div className="text-3xl uppercase text-gold font-title ">{price}</div>
-		</div>
+		</motion.div>
 	)
 }
 
 const PriceSection = ({ slice }) => {
 	const isMobile = useIsMobile()
 	useEffect(() => {}, [isMobile])
+
+	const priceSection = {
+		hidden: { opacity: 1 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 0.3,
+				staggerChildren: 0.1,
+			},
+		},
+	}
 	return (
 		<SectionWrapper
 			className="relative px-4 py-8 mt-20 bg-right bg-background-bar lg:py-12"
@@ -48,7 +71,13 @@ const PriceSection = ({ slice }) => {
 				hasUnderline
 				align={isMobile ? "left" : "center"}
 			/>
-			<div className="relative z-10 flex flex-wrap gap-8 my-8 text-white sm:w-full lg:grid lg:grid-cols-2 lg:my-16 lg:justify-center">
+			<motion.div
+				viewport={{ once: true }}
+				initial="hidden"
+				whileInView="visible"
+				variants={priceSection}
+				className="relative z-10 flex flex-wrap gap-8 my-8 text-white sm:w-full lg:grid lg:grid-cols-2 lg:my-16 lg:justify-center"
+			>
 				{Array.isArray(slice.items) &&
 					slice.items.map((price, index) => {
 						return (
@@ -66,16 +95,22 @@ const PriceSection = ({ slice }) => {
 							/>
 						)
 					})}
-			</div>
+			</motion.div>
 
-			<div className="relative z-10 flex flex-col gap-4 text-white lg:flex-row lg:justify-between">
+			<motion.div
+				initial="hidden"
+				viewport={{ once: true }}
+				whileInView="visible"
+				variants={fadeIn}
+				className="relative z-10 flex flex-col gap-4 text-white lg:flex-row lg:justify-between"
+			>
 				{slice.primary.accepted_payment_method_text && (
 					<span>{slice.primary.accepted_payment_method_text}</span>
 				)}
 				{slice.primary.disclaimer_text && (
 					<span>{slice.primary.disclaimer_text}</span>
 				)}
-			</div>
+			</motion.div>
 
 			<div className="absolute top-0 left-0 w-full h-full bg-black/80"></div>
 		</SectionWrapper>

@@ -4,6 +4,9 @@ import useIsMobile from "../utils/useIsMobile"
 import SectionWrapper from "../components/SectionWrapper"
 import { PrismicRichText, PrismicText } from "@prismicio/react"
 import Image from "next/image"
+import Button from "../components/Button"
+import { fadeIn } from "../utils/animations"
+import { motion } from "framer-motion"
 
 const ServiceCard = ({
 	imgSrc,
@@ -13,11 +16,21 @@ const ServiceCard = ({
 	width,
 	height,
 }) => {
+	const card = {
+		hidden: { opacity: 0, y: 30 },
+		visible: {
+			opacity: 1,
+			y: 0,
+		},
+	}
 	const isMobile = useIsMobile()
 	useEffect(() => {}, [isMobile])
 
 	return (
-		<div className="flex flex-col text-white bg-black rounded-lg h-80 xl:max-h-max xl:h-full">
+		<motion.div
+			variants={card}
+			className="flex flex-col text-white bg-black rounded-lg h-80 xl:max-h-max xl:h-full lg:hover:!-translate-y-3 lg:!transition-all lg:hover:shadow-xl lg:!duration-100 lg:cursor-default"
+		>
 			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2 xl:h-48 2xl:h-36">
 				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
 					{serviceTitle}
@@ -39,13 +52,29 @@ const ServiceCard = ({
 			<article className="w-full text-white bg-black rounded-b-lg h-1/2 xl:h-fit">
 				<p className="p-4 xl:py-12 xl:text-lg">{serviceDescr}</p>
 			</article>
-		</div>
+		</motion.div>
 	)
 }
 const ServicesSection = ({ slice }) => {
+	const cardWrapper = {
+		hidden: { opacity: 1 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 0.3,
+				staggerChildren: 0.1,
+			},
+		},
+	}
 	return (
 		<SectionWrapper className="px-4 py-20 bg-white xl:py-8" id="services">
-			<div className="xl:flex xl:flex-row xl:justify-between xl:items-baseline">
+			<motion.div
+				initial="hidden"
+				viewport={{ once: true }}
+				whileInView="visible"
+				variants={fadeIn}
+				className="xl:flex xl:flex-row xl:justify-between xl:items-baseline"
+			>
 				<SectionTitle
 					title={<PrismicText field={slice.primary.title} />}
 					subtitle={slice.primary.subtitle}
@@ -56,21 +85,28 @@ const ServicesSection = ({ slice }) => {
 						<PrismicRichText field={slice.primary.service_description} />
 					</div>
 					{slice.primary.price_button_label && (
-						<button
+						<Button
+							className="my-4"
+							type="primary"
 							onClick={() =>
 								document
 									.getElementById("pricesheet")
 									.scrollIntoView({ behavior: "smooth" })
 							}
-							className="px-6 py-3 mt-4 text-black uppercase border border-transparent rounded-md bg-gold font-title "
 						>
 							{slice.primary.price_button_label}
-						</button>
+						</Button>
 					)}
 				</div>
-			</div>
+			</motion.div>
 
-			<div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+			<motion.div
+				viewport={{ once: true }}
+				initial="hidden"
+				whileInView="visible"
+				variants={cardWrapper}
+				className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+			>
 				{Array.isArray(slice.items) &&
 					slice.items.map((service, index) => {
 						return (
@@ -87,7 +123,7 @@ const ServicesSection = ({ slice }) => {
 							/>
 						)
 					})}
-			</div>
+			</motion.div>
 		</SectionWrapper>
 	)
 }

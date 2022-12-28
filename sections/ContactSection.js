@@ -233,7 +233,7 @@ const ContactSection = ({ slice }) => {
 						<div className="xl:col-span-2">
 							<button
 								type="submit"
-								className="w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"
+								className="hover:translate-y-0.5 transition-transform ease-linear duration-75 active:translate-y-1 w-full px-6 py-3 mt-2 text-black uppercase border border-transparent rounded-md font-title bg-gold"
 							>
 								Submit
 							</button>

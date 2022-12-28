@@ -99,21 +99,31 @@ const Footer = ({ pageData }) => {
 					</div>
 					<div>
 						<span className="py-2 text-xl">Quicklinks</span>
-						<ul className="underline w-fit">
+						<ul className=" w-fit">
 							<li className="pt-4 pb-3">
-								<Link href="#about-us">About us</Link>
+								<Link href="#about-us" className="underline-hover">
+									About us
+								</Link>
 							</li>
 							<li className="pb-3">
-								<Link href="#services">Services</Link>
+								<Link href="#services" className="underline-hover">
+									Services
+								</Link>
 							</li>
 							<li className="pb-3">
-								<Link href="#pricesheet">Price sheet</Link>
+								<Link href="#pricesheet" className="underline-hover">
+									Price sheet
+								</Link>
 							</li>
 							<li className="pb-3">
-								<Link href="#testimonials">Testimonials</Link>
+								<Link href="#testimonials" className="underline-hover">
+									Testimonials
+								</Link>
 							</li>
 							<li className="">
-								<Link href="#contact-us">Get a quote</Link>
+								<Link href="#contact-us" className="underline-hover">
+									Get a quote
+								</Link>
 							</li>
 						</ul>
 					</div>

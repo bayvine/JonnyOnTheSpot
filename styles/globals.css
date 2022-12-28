@@ -188,6 +188,9 @@ body {
 	font-family: "Raleway", "sans-serif";
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+
+	--scroll-behavior: smooth !important;
+	scroll-behavior: smooth !important;
 }
 
 .font-title {
@@ -201,6 +204,36 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+.underline-hover {
+	position: relative;
+	width: fit-content;
+
+	transition: color;
+}
+
+.underline-hover:hover {
+	color: #f8dda4;
+}
+.underline-hover:hover::after,
+underline-hover:focus:after {
+	transform: scale(1);
+}
+
+.underline-hover:after {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #f8dda4;
+	transition: opacity 300ms, transform 300ms;
+
+	opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
 }
 
 /* @media (prefers-color-scheme: dark) {

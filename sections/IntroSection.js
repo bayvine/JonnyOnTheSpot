@@ -3,10 +3,40 @@ import GoldenHorizontalLine from "../components/GoldenHorizontalLine"
 import SectionWrapper from "../components/SectionWrapper"
 import { FaFacebook, FaYelp, FaInstagram } from "react-icons/fa"
 import { PrismicRichText, PrismicText } from "@prismicio/react"
+import * as prismicH from "@prismicio/helpers"
+import Button from "../components/Button"
+import { motion } from "framer-motion"
+import { fadeIn } from "../utils/animations"
 
 const IntroSection = ({ slice, pageData }) => {
 	const videoRef = useRef(null)
-	const services = ["Cocktails", "Non-alcoholic drinks", "Full-setup"]
+	const title = prismicH.asText(slice.primary.title)
+	const sentence = {
+		hidden: { opacity: 1 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 0.3,
+				staggerChildren: 0.08,
+			},
+		},
+	}
+	const letter = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+		},
+	}
+
+	const videoAnimation = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delay: 0.8,
+			},
+		},
+	}
 
 	useEffect(() => {
 		if (videoRef.current) {
@@ -17,11 +47,27 @@ const IntroSection = ({ slice, pageData }) => {
 	return (
 		<SectionWrapper className="relative top-0 left-0 min-h-screen sm:min-h-[750px] sm:flex sm:justify-center sm:items-center bg-black md:py-20">
 			<div className="relative z-20 flex flex-col items-center justify-center min-h-screen gap-2 p-4 lg:gap-4 xl:max-w-4xl xl:mx-auto">
-				<h1 className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title md:text-6xl xl:text-8xl">
-					<PrismicText field={slice.primary.title} />
-				</h1>
+				<motion.h1
+					variants={sentence}
+					initial="hidden"
+					animate="visible"
+					className="mt-auto overflow-hidden text-4xl font-black text-white uppercase w-fit font-title md:text-6xl xl:text-9xl xl:font-black"
+				>
+					{title.split("").map((char, index) => {
+						return (
+							<motion.span key={char + "-" + index} variants={letter}>
+								{char}
+							</motion.span>
+						)
+					})}
+				</motion.h1>
 				<GoldenHorizontalLine />
-				<span className="text-center text-white uppercase font-title xl:text-4xl">
+				<motion.span
+					className="text-center text-white uppercase font-title xl:text-4xl"
+					variants={fadeIn}
+					initial="hidden"
+					animate="visible"
+				>
 					<PrismicRichText
 						field={slice.primary.subtitle}
 						components={{
@@ -31,21 +77,31 @@ const IntroSection = ({ slice, pageData }) => {
 							em: ({ children }) => <u>{children}</u>,
 						}}
 					/>
-				</span>
-				<div className="pt-12 text-white 2xl:text-xl">
+				</motion.span>
+				<motion.div
+					className="pt-12 text-white 2xl:text-xl"
+					variants={fadeIn}
+					initial="hidden"
+					animate="visible"
+				>
 					{Array.isArray(slice.items) &&
 						slice.items.map((service, index) => {
 							return (
 								<span key={index}>
 									<PrismicText field={service.summarized_service} />
-									{index != services.length - 1 && " • "}
+									{index != slice.items.length - 1 && " • "}
 								</span>
 							)
 						})}
-				</div>
-				<div className="flex items-center gap-8 pt-12">
-					<button
-						className="uppercase rounded-md bg-[#F8DDA4] px-6 py-3 border border-transparent font-title "
+				</motion.div>
+				<motion.div
+					className="flex items-center gap-8 pt-12"
+					variants={fadeIn}
+					initial="hidden"
+					animate="visible"
+				>
+					<Button
+						type="primary"
 						onClick={() =>
 							document
 								.getElementById("contact-us")
@@ -53,9 +109,10 @@ const IntroSection = ({ slice, pageData }) => {
 						}
 					>
 						{slice.primary.primary_button || "Contact us"}
-					</button>
-					<button
-						className="uppercase rounded-md border-2 border-[#F8DDA4] text-[#F8DDA4] px-6 py-3 bg-none font-title"
+					</Button>
+
+					<Button
+						type="secondary"
 						onClick={() =>
 							document
 								.getElementById("pricesheet")
@@ -63,8 +120,8 @@ const IntroSection = ({ slice, pageData }) => {
 						}
 					>
 						{slice.primary.secondary_button || "View prices"}
-					</button>
-				</div>
+					</Button>
+				</motion.div>
 				<div className="flex justify-center gap-2 mt-auto justify-self-end md:gap-4">
 					{pageData.instagram_link?.url && (
 						<a
@@ -102,14 +159,17 @@ const IntroSection = ({ slice, pageData }) => {
 			</div>
 			<div className="overflow-x-hidden overflow-y-hidden">
 				<div className="absolute right-0 bottom-0 bg-black/50 z-[1] min-w-full min-h-full overflow-hidden"></div>
-				<video
+				<motion.video
+					variants={videoAnimation}
+					initial="hidden"
+					animate="visible"
 					preload="auto"
 					ref={videoRef}
 					autoPlay
 					muted
 					loop
 					id="myVideo"
-					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden"
+					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden background-black"
 				>
 					<source src={slice.primary.video_background.url} type="video/webm" />
 					<p>
@@ -119,7 +179,7 @@ const IntroSection = ({ slice, pageData }) => {
 							supports HTML5 video
 						</a>
 					</p>
-				</video>
+				</motion.video>
 			</div>
 		</SectionWrapper>
 	)

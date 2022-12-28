@@ -12,8 +12,15 @@ const Page = ({ page, navigation, settings }) => {
 	return (
 		<div className="overflow-x-hidden">
 			<Head>
+				<link rel="icon" href="/favicon.ico"></link>
 				<title>{page.data.site_title}</title>
+
 				<meta property="og:locale" content="en_US"></meta>
+				<meta property="og:title" content={page.data.site_title}></meta>
+				<meta
+					property="og:description"
+					content={page.data.site_description}
+				></meta>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -29,6 +36,8 @@ const Page = ({ page, navigation, settings }) => {
 				></meta>
 				<meta property="og:image:type" content="image/png"></meta>
 				<meta property="og:image" content={page.data.site_image.url}></meta>
+
+				<meta name="twitter:image" content={page.data.site_image.url}></meta>
 				<meta
 					property="og:image:width"
 					content={page.data.site_image.dimensions.width}
@@ -37,6 +46,7 @@ const Page = ({ page, navigation, settings }) => {
 					property="og:image:height"
 					content={page.data.site_image.dimensions.height}
 				></meta>
+				<link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
 			</Head>
 			<Navigation pageData={page.data} />
 			<SliceZone

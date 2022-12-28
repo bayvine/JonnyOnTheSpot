@@ -52,6 +52,26 @@ const Page = ({ page, navigation, settings }) => {
 					content={page.data.site_image.dimensions.height}
 				></meta>
 				<link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: `
+							{
+								"@context": "https://schema.org",
+								"@type": "LocalBusiness",
+								"name": "Jonny On The Spot", 
+								"image": ${page.data.site_image.url}, 
+								paymentAccepted: "Venmo, Credit Card, Cash, Zell", 
+								areaServed: "Bay Area, California.", 
+								telephone: "925-321-6569",
+								priceRange: "$$", 
+								email: "bronnylang@outlook.com",
+								openingHours: "Weekly 8AM to 6PM"
+							}
+							`,
+					}}
+				></script>
 			</Head>
 			<Navigation pageData={page.data} />
 			<SliceZone

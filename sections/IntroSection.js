@@ -74,7 +74,9 @@ const IntroSection = ({ slice, pageData }) => {
 							strong: ({ children }) => (
 								<span className="text-gold">{children}</span>
 							),
-							em: ({ children }) => <u>{children}</u>,
+							em: ({ children }) => (
+								<span className="underline">{children}</span>
+							),
 						}}
 					/>
 				</motion.span>

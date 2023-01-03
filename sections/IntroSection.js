@@ -41,7 +41,10 @@ const IntroSection = ({ slice, pageData }) => {
 	useEffect(() => {
 		if (videoRef.current) {
 			videoRef.current.playbackRate = 0.5
-			videoRef.current.play()
+
+			if (!videoRef.current.playing) {
+				videoRef.current.play()
+			}
 		}
 	}, [])
 	return (
@@ -170,6 +173,7 @@ const IntroSection = ({ slice, pageData }) => {
 					autoPlay
 					muted
 					loop
+					playsInline
 					id="myVideo"
 					className="absolute bottom-0 right-0 object-cover min-w-full min-h-full overflow-hidden background-black"
 				>

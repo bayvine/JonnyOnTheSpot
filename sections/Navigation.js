@@ -44,7 +44,10 @@ const NavItems = ({ pageData }) => {
 
 const MobileNavWrapper = ({ pageData, handleMenu }) => {
 	return (
-		<div className="flex items-start justify-center w-full h-full mt-20">
+		<div
+			className="flex items-start justify-center w-full h-full mt-20"
+			aria-hidden
+		>
 			<ul className="flex flex-col justify-center gap-8 text-center">
 				<li>
 					<Link

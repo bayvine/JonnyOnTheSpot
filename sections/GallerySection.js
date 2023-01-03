@@ -73,7 +73,7 @@ const GallerySection = ({ slice, pageData }) => {
 								])}
 								key={index}
 							>
-								<Image
+								<img
 									loading="lazy"
 									alt="Gallery item"
 									src={gallery_item.url}

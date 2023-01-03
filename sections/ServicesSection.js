@@ -37,9 +37,8 @@ const ServiceCard = ({
 				</h3>
 				<div>
 					<div className="absolute top-0 z-[5] left-0 w-full h-full bg-black/40 rounded-t-lg"></div>
-					<Image
-						placeholder="blur"
-						blurDataURL={`${imgSrc}&blur=200`}
+					<img
+						loading="lazy"
 						width={width}
 						height={height}
 						aria-hidden

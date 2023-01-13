@@ -75,6 +75,17 @@ interface HomePageDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
+     * Image logo field in *Home page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.image_logo
+     * - **Tab**: Navigation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image_logo: prismicT.ImageField<never>;
+    /**
      * Footer title field in *Home page*
      *
      * - **Field Type**: Text
@@ -184,6 +195,17 @@ interface HomePageDocumentData {
      *
      */
     localbusiness: prismicT.GroupField<Simplify<HomePageDocumentDataLocalbusinessItem>>;
+    /**
+     * Slice Zone field in *Home page*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.slices3[]
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices3: prismicT.SliceZone<HomePageDocumentDataSlices3Slice>;
 }
 /**
  * Slice for *Home page → Slice Zone*
@@ -306,6 +328,11 @@ export interface HomePageDocumentDataLocalbusinessItem {
      */
     address: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Home page → Slice Zone*
+ *
+ */
+type HomePageDocumentDataSlices3Slice = FaqSlice;
 /**
  * Home page document from Prismic
  *
@@ -476,6 +503,55 @@ type ContactSectionSliceVariation = ContactSectionSliceDefault;
  *
  */
 export type ContactSectionSlice = prismicT.SharedSlice<"contact_section", ContactSectionSliceVariation>;
+/**
+ * Item in Faq → Items
+ *
+ */
+export interface FaqSliceDefaultItem {
+    /**
+     * Question field in *Faq → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq.items[].question
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    question: prismicT.RichTextField;
+    /**
+     * Answer field in *Faq → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq.items[].answer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    answer: prismicT.RichTextField;
+}
+/**
+ * Default variation for Faq Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Faq`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<FaqSliceDefaultItem>>;
+/**
+ * Slice variation for *Faq*
+ *
+ */
+type FaqSliceVariation = FaqSliceDefault;
+/**
+ * Faq Shared Slice
+ *
+ * - **API ID**: `faq`
+ * - **Description**: `Faq`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqSlice = prismicT.SharedSlice<"faq", FaqSliceVariation>;
 /**
  * Primary content in GallerySection → Primary
  *
@@ -976,6 +1052,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocumentDataLocalbusinessItem, HomePageDocument, AllDocumentTypes, AboutSectionSliceDefaultPrimary, AboutSectionSliceDefault, AboutSectionSliceVariation, AboutSectionSlice, ContactSectionSliceDefaultPrimary, ContactSectionSliceDefault, ContactSectionSliceVariation, ContactSectionSlice, GallerySectionSliceDefaultPrimary, GallerySectionSliceDefaultItem, GallerySectionSliceDefault, GallerySectionSliceVariation, GallerySectionSlice, IntroSectionSliceDefaultPrimary, IntroSectionSliceDefaultItem, IntroSectionSliceDefault, IntroSectionSliceVariation, IntroSectionSlice, PriceSectionSliceDefaultPrimary, PriceSectionSliceDefaultItem, PriceSectionSliceDefault, PriceSectionSliceVariation, PriceSectionSlice, ServicesSectionSliceDefaultPrimary, ServicesSectionSliceDefaultItem, ServicesSectionSliceDefault, ServicesSectionSliceVariation, ServicesSectionSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice };
+        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocumentDataLocalbusinessItem, HomePageDocumentDataSlices3Slice, HomePageDocument, AllDocumentTypes, AboutSectionSliceDefaultPrimary, AboutSectionSliceDefault, AboutSectionSliceVariation, AboutSectionSlice, ContactSectionSliceDefaultPrimary, ContactSectionSliceDefault, ContactSectionSliceVariation, ContactSectionSlice, FaqSliceDefaultItem, FaqSliceDefault, FaqSliceVariation, FaqSlice, GallerySectionSliceDefaultPrimary, GallerySectionSliceDefaultItem, GallerySectionSliceDefault, GallerySectionSliceVariation, GallerySectionSlice, IntroSectionSliceDefaultPrimary, IntroSectionSliceDefaultItem, IntroSectionSliceDefault, IntroSectionSliceVariation, IntroSectionSlice, PriceSectionSliceDefaultPrimary, PriceSectionSliceDefaultItem, PriceSectionSliceDefault, PriceSectionSliceVariation, PriceSectionSlice, ServicesSectionSliceDefaultPrimary, ServicesSectionSliceDefaultItem, ServicesSectionSliceDefault, ServicesSectionSliceVariation, ServicesSectionSlice, TestimonialSectionSliceDefaultPrimary, TestimonialSectionSliceDefaultItem, TestimonialSectionSliceDefault, TestimonialSectionSliceVariation, TestimonialSectionSlice };
     }
 }

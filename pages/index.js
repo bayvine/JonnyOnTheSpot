@@ -1,4 +1,4 @@
-import { SliceZone } from "@prismicio/react"
+import { PrismicRichText, SliceZone } from "@prismicio/react"
 import Script from "next/script"
 import * as prismicH from "@prismicio/helpers"
 import { createClient } from "../prismicio"
@@ -9,6 +9,9 @@ import Head from "next/head"
 
 const Page = ({ page, navigation, settings }) => {
 	const localBusinessFromPrismic = page.data.localbusiness[0]
+	const faqs =
+		(Array.isArray(page.data.slices3[0].items) && page.data.slices3[0].items) ||
+		[]
 	const localBusinessSchema = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
@@ -29,16 +32,19 @@ const Page = ({ page, navigation, settings }) => {
 		"@context": "https://schema.org",
 		"@type": "FAQPage",
 		mainEntity: [
-			{
-				"@type": "Question",
-				name: "What is the return policy?",
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: "<p>Most unopened items in new condition and returned within <b>90 days</b> will receive a refund or exchange. Some items have a modified return policy noted on the receipt or packing slip. Items that are opened or damaged or do not have a receipt may be denied a refund or exchange. Items purchased online or in-store may be returned to any store.</p><p>Online purchases may be returned via a major parcel carrier. <a href=https://example.com/returns> Click here </a> to initiate a return.</p>",
-				},
-			},
+			faqs.map((item, _) => {
+				return {
+					"@type": "Question",
+					name: prismicH.asText(item.question),
+					acceptedAnswer: {
+						"@type": "Answer",
+						text: prismicH.asHTML(item.answer),
+					},
+				}
+			}),
 		],
 	}
+
 	return (
 		<div className="overflow-x-hidden">
 			<Head>

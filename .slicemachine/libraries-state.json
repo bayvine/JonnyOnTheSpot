@@ -111,7 +111,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/AboutSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/AboutSection/default/preview.png",
             "width": 1234,
             "height": 828
           }
@@ -208,11 +208,85 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/ContactSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/ContactSection/default/preview.png",
             "width": 2860,
             "height": 1220
           }
         }
+      },
+      "faq": {
+        "library": "slices",
+        "id": "faq",
+        "name": "Faq",
+        "description": "Faq",
+        "model": {
+          "id": "faq",
+          "type": "SharedSlice",
+          "name": "Faq",
+          "description": "Faq",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Faq",
+              "primary": {},
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Lorem tempor in aute amet culpa. Ipsum mollit duis voluptate Lorem amet magna eu. Sint velit aliqua ipsum deserunt Lorem ad ad quis.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "In officia Lorem aliqua tempor eiusmod in laboris consectetur dolore est occaecat.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {},
+            "slice_type": "faq"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "gallery_section": {
         "library": "slices",
@@ -304,7 +378,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/GallerySection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/GallerySection/default/preview.png",
             "width": 1710,
             "height": 980
           }
@@ -433,7 +507,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/IntroSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/IntroSection/default/preview.png",
             "width": 1492,
             "height": 1149
           }
@@ -588,7 +662,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/PriceSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/PriceSection/default/preview.png",
             "width": 2840,
             "height": 1198
           }
@@ -727,7 +801,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/ServicesSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/ServicesSection/default/preview.png",
             "width": 2094,
             "height": 1002
           }
@@ -849,7 +923,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/brainilio/Desktop/Projects/JonnyOnTheSpot.nosync/slices/TestimonialSection/default/preview.png",
+            "path": "/Users/brainiliorodrigues/Desktop/Projects/Freelance.nosync/JonnyOnTheSpot/slices/TestimonialSection/default/preview.png",
             "width": 950,
             "height": 644
           }

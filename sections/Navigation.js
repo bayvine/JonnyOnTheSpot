@@ -159,7 +159,13 @@ const Navigation = ({ pageData }) => {
 							})
 						}
 					>
-						{pageData.title}
+						<img
+							alt={pageData.image_logo.alt}
+							width=""
+							height=""
+							src={pageData.image_logo.url}
+							className={`aspect-[${pageData.image_logo.dimensions.width}/${pageData.image_logo.dimensions.height}] w-32`}
+						/>
 					</button>
 					<div className="">
 						<NavItems pageData={pageData} />
@@ -174,8 +180,14 @@ const Navigation = ({ pageData }) => {
 				])}
 			>
 				<div className="flex items-center justify-between w-full px-4 py-4">
-					<div className="text-xl uppercase text-gold font-title">
-						{pageData.title}
+					<div>
+						<img
+							alt={pageData.image_logo.alt}
+							width=""
+							height=""
+							src={pageData.image_logo.url}
+							className={`aspect-[${pageData.image_logo.dimensions.width}/${pageData.image_logo.dimensions.height}] w-40`}
+						/>
 					</div>
 					<div>
 						<Hamburger

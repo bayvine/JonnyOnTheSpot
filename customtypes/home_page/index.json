@@ -73,6 +73,14 @@
           "label": "Title",
           "placeholder": ""
         }
+      },
+      "image_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Image logo",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     },
     "Footer": {
@@ -231,6 +239,17 @@
                 "label": "address",
                 "placeholder": ""
               }
+            }
+          }
+        }
+      },
+      "slices3": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "faq": {
+              "type": "SharedSlice"
             }
           }
         }

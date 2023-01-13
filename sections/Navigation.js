@@ -186,7 +186,7 @@ const Navigation = ({ pageData }) => {
 							width={pageData.image_logo.dimensions.width}
 							height={pageData.image_logo.dimensions.height}
 							src={pageData.image_logo.url}
-							className={`aspect-[${pageData.image_logo.dimensions.width}/${pageData.image_logo.dimensions.height}] w-40`}
+							className={`aspect-[${pageData.image_logo.dimensions.width}/${pageData.image_logo.dimensions.height}] w-32`}
 						/>
 					</div>
 					<div>

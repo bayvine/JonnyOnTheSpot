@@ -100,7 +100,7 @@ const IntroSection = ({ slice, pageData }) => {
 						})}
 				</motion.div>
 				<motion.div
-					className="flex items-center gap-8 pt-12"
+					className="flex items-center gap-8 pt-12 "
 					variants={fadeIn}
 					initial="hidden"
 					animate="visible"

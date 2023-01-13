@@ -191,7 +191,7 @@ const ContactSection = ({ slice }) => {
 							<input
 								value={location}
 								onChange={(e) => setLocation(e.target.value)}
-								placeholder="Livermoore, CA..."
+								placeholder="Livermore, CA..."
 								name="location"
 								id="location"
 								type="text"

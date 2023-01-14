@@ -62,10 +62,7 @@ const Page = ({ page, navigation, settings }) => {
 					content="width=device-width, initial-scale=1"
 				></meta>
 				<meta name="description" content={page.data.site_description}></meta>
-				<meta
-					property="og:url"
-					content="https://jonnyonthespot.netlify.app/"
-				></meta>
+				<meta property="og:url" content="https://jotsmobilebar.com/"></meta>
 				<meta
 					name="robots"
 					content="index, follow, max-video-preview:-1, max-snippet:-1, max-image-preview:large"

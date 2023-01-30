@@ -32,7 +32,7 @@ const ServiceCard = ({
 			className="flex flex-col text-white bg-black rounded-lg h-80 xl:max-h-max xl:h-full lg:hover:!-translate-y-3 lg:!transition-all lg:hover:shadow-xl lg:!duration-100 lg:cursor-default"
 		>
 			<div className="relative flex items-center justify-center w-full rounded-t-lg h-1/2 xl:h-48 2xl:h-36">
-				<h3 className="relative z-10 text-4xl text-center text-white uppercase font-title ">
+				<h3 className="relative z-10 text-4xl text-center text-white uppercase lg:px-4 font-title ">
 					{serviceTitle}
 				</h3>
 				<div>
@@ -49,7 +49,7 @@ const ServiceCard = ({
 				</div>
 			</div>
 			<article className="w-full text-white bg-black rounded-b-lg h-1/2 xl:h-fit">
-				<p className="p-4 xl:py-12 xl:text-lg">{serviceDescr}</p>
+				<p className="p-4 xl:py-8 xl:text-lg">{serviceDescr}</p>
 			</article>
 		</motion.div>
 	)

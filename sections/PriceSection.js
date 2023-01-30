@@ -25,7 +25,7 @@ const PriceItem = ({
 	return (
 		<motion.div
 			variants={card}
-			className="flex flex-col gap-4 lg:flex-row lg:items-center"
+			className="flex flex-col gap-8 lg:flex-row lg:items-center "
 		>
 			<img
 				src={imgSrc}
@@ -34,13 +34,15 @@ const PriceItem = ({
 				height={height}
 				width={width}
 			/>
-			<div>
-				<span className="text-2xl uppercase text-gold font-title ">
-					{title}
+			<div className=" lg:max-w-[420px] lg:w-[420px] lg:h-full">
+				<span className="text-2xl uppercase text-gold font-title">{title}</span>
+				<span className="max-w-xs text-lg lg:inline-block text-bold">
+					{description}
 				</span>
-				<span className="text-lg text-bold">{description}</span>
 			</div>
-			<div className="text-3xl uppercase text-gold font-title ">{price}</div>
+			<div className="text-2xl uppercase  text-gold font-title lg:w-[200px]">
+				<span>{price}</span>
+			</div>
 		</motion.div>
 	)
 }
@@ -76,7 +78,7 @@ const PriceSection = ({ slice }) => {
 				initial="hidden"
 				whileInView="visible"
 				variants={priceSection}
-				className="relative z-10 flex flex-wrap gap-8 my-8 text-white sm:w-full lg:grid lg:grid-cols-2 lg:my-16 lg:justify-center"
+				className="relative z-10 flex flex-wrap my-8 text-white gap-14 sm:w-full lg:grid lg:grid-cols-2 lg:my-16 lg:justify-center"
 			>
 				{Array.isArray(slice.items) &&
 					slice.items.map((price, index) => {
